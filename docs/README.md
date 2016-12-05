@@ -5,11 +5,17 @@
 Medium is a web application inspired by Medium build using a Ruby on Rails backend with a javascript React/Redux frontend. This project will, by the end of Week 9, include the following:
 
   Live hosting on Heroku
+
   User account creation, login, and guest login
+
   Stories
+
   Comments on stories
+
   Follows and User feed
+
   Likes
+  
   Topics
 
 ##Design Docs
