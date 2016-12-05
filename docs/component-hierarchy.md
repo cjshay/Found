@@ -5,35 +5,30 @@
 
 **HomeContainer**
  - Home
- - Sidebar
+ - StoriesContainer
+ - Sidebar (story suggestions)
 
 **StoriesContainer**
- - StoriesHeader
-  * StoryIndex
+  * StoryIndex(for any one User)
 
-**CommentContainer**
- - CommentHeader
+
+**CommentsContainer**
+ - CommentIndexItem
 
 **SearchResultsContainer**
- - Search
- - StoryIndex
+ - StorySearch
+ - StoryIndex (all stories)
 
 **StoryIndex**
  - StoryIndexItem
   + StoryDetail
-    + StoryTools
-    - StorySearch
     * Story
 
 **NewStoryContainer**
  - NewStory
-  - RTETools
-  - NewStoryButton
 
-**Search**
-
-**NewStory**
- - NewStory
+ **NewComment**
+ - New Comment
 
 **StorySearch**
  + AutoSearch
@@ -46,11 +41,11 @@
 | "/sign-up" | "AuthFormContainer" |
 | "/sign-in" | "AuthFormContainer" |
 | "/home" | "HomeContainer" |
-| "/home/story/:storyId" | "StoriesContainer" |
-| "/home/story/:commentId/comment/:commentId" | "CommentContainer" |
-| "/home/search-results" | "SearchResultsContainer"
+| "/stories" | "StoriesContainer" |
+| "/users/:user-id/stories" | "UserStoriesContainer" |
+| "/stories/:story-id" | "StoryIndexItem" |
+| "/stories/:story-id/comments/" | "CommentsContainer" |
+| "/stories/:story-id/comments/:comment-id" | "Comment" |
 | "/new-story" | "NewStoryContainer" |
-| "/search" | "Search" |
-| "/new-story" | "NewStory" |
 | "/new-comment" | "NewComment" |
 | "/story-search" | "StorySearch" |

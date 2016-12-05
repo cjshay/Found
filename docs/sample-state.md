@@ -4,9 +4,6 @@
     id: 1,
     username: "edgey listener"
     description: "I listen and I'm edgey"
-    // story_ids: []
-    // follower_ids: []
-    // followee_ids: []
   },
   forms: {
     signUp: {errors: []},
@@ -22,13 +19,27 @@
       author_id: 1,
       like_count: 35
       comment_ids: []
+    },
+    2: {
+      title: "Some good games out there",
+      content: "Some football",
+      author_id: 1,
+      like_count: 8
+      comment_ids: []
     }
   },
   comments: {
     1: {
-      author_id: 1,
+      author_id: 2,
       content: "You should buy a coat",
-      like_count: 35
+      like_count: 35,
+      story_id: 1
+    },
+    2: {
+      author_id: 3,
+      content: "It's not even cold outside",
+      like_count: 2,
+      story_id: 1
     }
   }
 }

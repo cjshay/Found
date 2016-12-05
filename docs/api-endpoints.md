@@ -28,22 +28,25 @@
 
 ### Comments
 
-- `GET /api/comments`
-- `POST /api/comments`
-- `GET /api/comments/:id`
-- `DELETE /api/comments/:id`
-<!-- - `GET /api/comments/:id/notes`
-  - index of all notes for a notebook
-  - accepts pagination params (if I get there) -->
+- `GET /api/stories/:story-id/comments`
+- `POST /api/stories/:story-id/comments`
+- `GET /api/stories/:story-id/comments/:id`
+- `DELETE /api/stories/:story-id/comments/:id`
+
 
 ### Follows
 
 - A Users's follows will be included in the user show template
-- `POST /api/follows`
-- `DELETE /api/follows/:id`
+- `POST /api/users/:user-id/follows`
+- `DELETE /api/users/:user-id/follows/:id`
 
 ### Likes
 
 - A Users's follows will be included in the corresponding story/comment show template
-- `POST /api/likes`
-- `DELETE /api/likes/:id`
+- `POST /api/stories/story:id/likes`
+or
+- `POST /api/stories/story:id/comments/:comment-id/likes`
+
+- `DELETE /api/stories/story:id/likes/:id`
+or
+- `DELETE /api/stories/story:id/comments/:comment-id/likes/:id`
