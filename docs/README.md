@@ -50,6 +50,6 @@ Objective: Users can follow other users and have access to stories from those us
 
 Objective: Users can like stories and/or comments. User's feeds and show pages have infinite scroll.
 
-###Phase 6: Topics (1 day)
+###Phase 6: Topics, Bookmarks, Feed Infinite Scroll (1 day)
 
-Objective: Users can tag stories in topics. They are then searchable.
+Objective: Users can tag stories in topics. They are then searchable. Make sure app looks well-done and add any extra features.
