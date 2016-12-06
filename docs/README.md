@@ -1,5 +1,9 @@
 #Medium
 
+## Hosting on Heroku
+
+[Medium clone](https://medium-cloned.herokuapp.com/)
+
 ##Minimum Viable Product
 
 Medium is a web application inspired by Medium build using a Ruby on Rails backend with a javascript React/Redux frontend. This project will, by the end of Week 9, include the following:
@@ -15,7 +19,7 @@ Medium is a web application inspired by Medium build using a Ruby on Rails backe
   Follows and User feed
 
   Likes
-  
+
   Topics
 
 ##Design Docs

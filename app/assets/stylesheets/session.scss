@@ -1,9 +1,22 @@
 
 
 .auth {
-  width: 400px;
-  height: 500px;
-  margin: 0 auto;
+  width: 518px;
+  height: 403px;
+  margin: 110px auto 0px;
+  border: 1px solid gray;
+  display: block;
+  border-radius: 5px;
+}
+.auth h3{
+  display: block;
+  height: 36px;
+  background: #eee;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 25px 0px;
+
 }
 .auth-form {
   margin: 0 auto;
@@ -11,7 +24,11 @@
 .auth input,
 .auth button{
   width: 300px;
-  height: 40px;
+  height: 56px;
+  display: block;
+}
+.auth label{
+  display: block;
 }
 
 .auth button{

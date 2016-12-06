@@ -12,11 +12,12 @@ const sessionReducer = (state = initialState, action) => {
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       const currentUser = {currentUser: action.user};
-      newState = merge({}, state, currentUser);
+      newState = merge({}, initialState, currentUser);
       return newState;
     case RECEIVE_ERRORS:
       const errors = {errors: action.errors};
       newState = merge({}, state, errors);
+      debugger
       return newState;
     default:
       return state;

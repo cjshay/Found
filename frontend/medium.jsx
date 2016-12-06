@@ -4,8 +4,6 @@ import configureStore from './store/store.js';
 import Root from './components/root';
 
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };

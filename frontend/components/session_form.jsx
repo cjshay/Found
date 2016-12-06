@@ -25,10 +25,10 @@ class SessionForm extends React.Component {
   render() {
     if (this.props.formType === 'signin') {
       return (
-        <div class="auth">
-          <header>Sign In</header>
+        <div className="auth">
+          <h3>Sign In to Medium</h3>
 
-          <form class="auth-form" onSubmit={this.handleSubmit}>
+          <form className="auth-form" onSubmit={this.handleSubmit}>
             <label>Username
               <input type="text" name="user[username]" placeholder="your username" onChange={this.update('username')} />
             </label>
@@ -45,20 +45,20 @@ class SessionForm extends React.Component {
       );
     } else if (this.props.formType === 'signup') {
       return (
-        <div class="auth">
-          <header>Sign In</header>
+        <div className="auth">
+          <header>Create an account on Medium</header>
 
-          <form class="auth-form" onSubmit={this.handleSubmit}>
+          <form className="auth-form" onSubmit={this.handleSubmit}>
             <label>Username
-              <input type="text" name="user[username]" onChange={this.update('username')}/>
+              <input type="text" name="user[username]" placeholder="your username" onChange={this.update('username')}/>
             </label>
             <label>Password
-              <input type="password" name="user[password]" onChange={this.update('password')} />
+              <input type="password" name="user[password]" placeholder="your password" onChange={this.update('password')} />
             </label>
             <input type="submit" value="Signup"/>
           </form>
 
-          <p>{ this.errors }</p>
+          <p>{ this.props.errors[0] }</p>
 
           <button>
             <Link to='/signin'>Signin</Link>

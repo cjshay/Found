@@ -7,8 +7,13 @@
     "doc": "docs",
     "test": "test"
   },
+  "engines": {
+   "node": "6.2.1",
+   "npm": "3.9.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -31,6 +36,7 @@
     "react-redux": "^4.4.6",
     "react-router": "^3.0.0",
     "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
     "webpack": "^1.13.3"
   }
 }

@@ -4,16 +4,16 @@ import { signup, signin } from '../actions/session_actions';
 
 
 const formType = (pathname) => {
-  if (pathname === "/login") {
-    return 'login';
+  if (pathname === "/signin") {
+    return 'signin';
   }else if (pathname === "/signup"){
     return 'signup';
   }
 };
 
 const processingForm = (dispatch, type) => {
-  if (type === 'login') {
-    return user => dispatch(login(user));
+  if (type === 'signin') {
+    return user => dispatch(signin(user));
   } else {
   return user => dispatch(signup(user));
   }
@@ -21,7 +21,7 @@ const processingForm = (dispatch, type) => {
 
 const mapStateToProps = state => {
   return {
-    loggedIn: !!state.session.currentUser,
+    signedIn: !!state.session.currentUser,
     errors: state.session.errors
   };
 };
