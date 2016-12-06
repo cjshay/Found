@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
     } else if (this.props.formType === 'signup') {
       return (
         <div className="auth">
-          <header>Create an account on Medium</header>
+          <h3>Create an account on Medium</h3>
 
           <form className="auth-form" onSubmit={this.handleSubmit}>
             <label>Username
