@@ -17,7 +17,6 @@ const sessionReducer = (state = initialState, action) => {
     case RECEIVE_ERRORS:
       const errors = {errors: action.errors};
       newState = merge({}, state, errors);
-      debugger
       return newState;
     default:
       return state;
