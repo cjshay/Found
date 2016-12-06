@@ -38,9 +38,6 @@ class SessionForm extends React.Component {
             <input type="submit" value="Signin"/>
           </form>
           <p>{ this.props.errors[0] }</p>
-          <button>
-            <Link to='/signup'>Signup</Link>
-          </button>
         </div>
       );
     } else if (this.props.formType === 'signup') {
@@ -59,10 +56,6 @@ class SessionForm extends React.Component {
           </form>
 
           <p>{ this.props.errors[0] }</p>
-
-          <button>
-            <Link to='/signin'>Signin</Link>
-          </button>
         </div>
       );
       }

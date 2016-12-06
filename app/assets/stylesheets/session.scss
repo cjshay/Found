@@ -2,8 +2,8 @@
 
 .auth {
   width: 518px;
-  height: 403px;
-  margin: 110px auto 0px;
+  height: 500px;
+  margin: auto;
   border: 1px solid gray;
   display: block;
   border-radius: 5px;
@@ -21,16 +21,29 @@
 .auth-form {
   margin: 0 auto;
 }
-.auth input,
-.auth button{
-  width: 300px;
-  height: 56px;
+.auth input {
+  width: 453px;
   display: block;
+  margin-top: 10px;
 }
 .auth label{
   display: block;
+  color: gray;
+  margin: 40px;
+  font-size: 16px;
 }
 
-.auth button{
+.auth input[type="submit"]{
   color: green;
+  height: 54px;
+  margin: 0 auto;
+  border: 1px solid green;
+  border-radius: 3px;
+  font-size: 16px;
+  background: white;
+
+}
+.auth input {
+  height: 30px;
+  
 }
