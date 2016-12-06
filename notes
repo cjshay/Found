@@ -1,0 +1,10 @@
+
+Notes
+- try to see if I can render the info I want without using jbuilder (seems verbose?)
+- make tests so that when I change something, I know nothing is breaking
+
+
+questions
+- what is being passed into app
+- how does the whole children thing work in React
+- what is the point of app/ what is it's purpose?
