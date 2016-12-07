@@ -16,4 +16,18 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-family: inherit;
   vertical-align: baseline;
   background: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+// clearfix
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
 }

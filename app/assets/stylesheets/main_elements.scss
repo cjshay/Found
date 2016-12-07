@@ -1,0 +1,48 @@
+.main-header {
+  margin: 10px auto;
+  display: block;
+  width: 900px;
+  height: 50px;
+  border-bottom: 1px solid gray;
+
+
+}
+
+.section-header {
+  border-bottom: 1px solid gray;
+}
+
+.main-header-rep {
+  float: left;
+}
+
+
+.main-header-rep li {
+  float: left;
+  margin-right: 20px;
+  font-size: 24px;
+
+}
+
+.main-header-nav {
+  float: right;
+}
+
+.main-header-nav a,
+.main-header-nav-other ,
+ {
+  float: left;
+  margin-left: 20px;
+}
+
+
+.story-nav{
+  margin: 0 auto;
+  height: 50px;
+  width: 900px;
+  float: right;
+}
+.story-nav a{
+  float: left;
+  margin: 10px 20px;
+}
