@@ -4,10 +4,10 @@ import GreetingContainer from './greeting_container';
 
 const App = ({ children }) => {
   return (
-    <div>
+    <section>
       <GreetingContainer />
       { children }
-    </div>
+    </section>
   );
 };
 

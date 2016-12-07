@@ -9,39 +9,51 @@
     }
     errors: {[]}
   },
+  stories: {
+    1: {
+      id: 1,
+      title: "Winter is coming",
+      content: "or is it?",
+      author: {
+        username: "coolcat",
+        description: "is a coolcat"
+      },
+      like_count: 35,
+      comment_ids: []
+    },
+    2: {
+      id: 2,
+      title: "Some good games out there",
+      content: "Some football",
+      author: {
+        username: "coolcat",
+        description: "is a coolcat"
+      },
+      like_count: 8,
+      comment_ids: []
+    }
+  },
   forms: {
     createStory: {errors: []}
     createComment: {errors: ["content can't be blank"]}
     search: {errors: []}
   },
-  stories: {
-    1: {
-      title: "Winter is coming",
-      content: "or is it?",
-      author_id: 1,
-      author_name: "John Smith",
-      author_description: "I do my thing",
-      like_count: 35,
-      comment_ids: []
-    },
-    2: {
-      title: "Some good games out there",
-      content: "Some football",
-      author_id: 1,
-      like_count: 8
-      comment_ids: []
-    }
-  },
   comments: {
     1: {
-      author_id: 2,
       content: "You should buy a coat",
+      author: {
+        username: "coolcat",
+        description: "is a coolcat"
+      },
       like_count: 35,
       story_id: 1
     },
     2: {
-      author_id: 3,
       content: "It's not even cold outside",
+      author: {
+        username: "coolcat",
+        description: "is a coolcat"
+      },
       like_count: 2,
       story_id: 1
     }

@@ -8,3 +8,16 @@ questions
 - what is being passed into app
 - how does the whole children thing work in React
 - what is the point of app/ what is it's purpose?
+- how do I pass my png images into the react component
+- how do I get my nav bar to always stay central
+- how do I select the different signins without going into ids
+- Is my heroku database connected to my local database?
+- if I update how the heroku database works, will I have to clear everything?
+- how can I push to the router when I didn't import router
+- why do we send back a function to this.update?
+
+
+Found
+Requiem
+Shape
+Deconstruct

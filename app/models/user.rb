@@ -1,8 +1,25 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  username        :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 class User < ApplicationRecord
   attr_reader :password
 
   validates :username, :password_digest, :session_token, presence: true, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
+
+  has_many :stories,
+    class_name: 'Story',
+    primary_key: :id,
+    foreign_key: :author_id
 
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
