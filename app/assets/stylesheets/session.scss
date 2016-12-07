@@ -3,7 +3,7 @@
 .auth {
   width: 518px;
   height: 500px;
-  margin: auto;
+  margin: auto auto;
   border: 1px solid gray;
   display: block;
   border-radius: 5px;
@@ -18,25 +18,29 @@
   padding: 25px 0px;
 
 }
+
 .auth-form {
-  margin: 0 auto;
+
 }
+
 .auth input {
   width: 453px;
   display: block;
-  margin-top: 10px;
+  margin: 10px auto;
+  font-size: 18px;
+
 }
 .auth label{
   display: block;
   color: gray;
-  margin: 40px;
+  margin: 30px;
   font-size: 16px;
 }
 
 .auth input[type="submit"]{
   color: green;
-  height: 54px;
-  margin: 0 auto;
+  height: 56px;
+  // margin: 0 auto;
   border: 1px solid green;
   border-radius: 3px;
   font-size: 16px;
@@ -45,5 +49,5 @@
 }
 .auth input {
   height: 30px;
-  
+
 }
