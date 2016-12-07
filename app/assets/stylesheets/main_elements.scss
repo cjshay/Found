@@ -1,5 +1,5 @@
 .section-header {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid whitesmoke;
   margin: 0 auto;
   background: white;
 }
@@ -10,7 +10,7 @@
   display: block;
   width: 900px;
   height: 50px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid whitesmoke;
 }
 
 .main-header-rep {
@@ -34,14 +34,14 @@
   color: green;
 }
 .not-logged-in a:hover {
-  color: black;
+  color: gray;
 }
 
 .main-header-nav a,
 .main-header-nav-other {
   float: left;
   margin-left: 20px;
-  color: gray;
+  color: darkgray;
 }
 
 .main-header-nav button {
@@ -80,9 +80,9 @@
 .story-nav a{
   float: left;
   margin: 10px 20px;
-  color: gray;
+  color: darkgray;
 }
 
 .story-nav a:hover{
-  color: black;
+  color: gray;
 }
