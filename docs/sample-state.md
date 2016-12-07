@@ -1,13 +1,15 @@
 ```js
 {
-  currentUser: {
-    id: 1,
-    username: "edgey listener"
-    description: "I listen and I'm edgey"
+
+  session: {
+    currentUser: {
+      id: 1,
+      username: "edgey listener"
+      description: "I listen and I'm edgey"
+    }
+    errors: {[]}
   },
   forms: {
-    signUp: {errors: []},
-    signIn: {errors: []},
     createStory: {errors: []}
     createComment: {errors: ["content can't be blank"]}
     search: {errors: []}
@@ -17,7 +19,9 @@
       title: "Winter is coming",
       content: "or is it?",
       author_id: 1,
-      like_count: 35
+      author_name: "John Smith",
+      author_description: "I do my thing",
+      like_count: 35,
       comment_ids: []
     },
     2: {

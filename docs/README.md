@@ -32,9 +32,11 @@ Medium is a web application inspired by Medium build using a Ruby on Rails backe
 
 [API Endpoints](api-endpoints.md)
 
+[Schema](schema.md)
+
 ##Implementation Timeline
 
-###Phase 1: Backend setup and Front End User Authentication (1 day)
+###Phase 1: Backend setup and Front End User Authentication (2 days)
 
 Objective: Rails project with functioning authentication
 
@@ -53,7 +55,3 @@ Objective: Users can follow other users and have access to stories from those us
 ###Phase 5: Likes and infinite scroll (1 day)
 
 Objective: Users can like stories and/or comments. User's feeds and show pages have infinite scroll.
-
-###Phase 6: Topics, Bookmarks, Feed Infinite Scroll (1 day)
-
-Objective: Users can tag stories in topics. They are then searchable. Make sure app looks well-done and add any extra features.

@@ -28,25 +28,25 @@
 
 ### Comments
 
-- `GET /api/stories/:story-id/comments`
-- `POST /api/stories/:story-id/comments`
-- `GET /api/stories/:story-id/comments/:id`
-- `DELETE /api/stories/:story-id/comments/:id`
+- `GET /api/stories/:story_id/comments`
+- `POST /api/stories/:story_id/comments`
+- `GET /api/comments/:id`
+- `DELETE /api/comments/:id`
 
 
 ### Follows
 
 - A Users's follows will be included in the user show template
-- `POST /api/users/:user-id/follows`
-- `DELETE /api/users/:user-id/follows/:id`
+- `POST /api/follows`
+- `DELETE /api/follows/:id`
 
 ### Likes
 
 - A Users's follows will be included in the corresponding story/comment show template
-- `POST /api/stories/story:id/likes`
+- `POST /api/comments/comment_id/likes`
 or
-- `POST /api/stories/story:id/comments/:comment-id/likes`
+- `POST /api/stories/story_id/likes`
 
-- `DELETE /api/stories/story:id/likes/:id`
+- `DELETE /api/stories/story_id/likes/`
 or
-- `DELETE /api/stories/story:id/comments/:comment-id/likes/:id`
+- `DELETE /api/comments/:comment-id/likes`
