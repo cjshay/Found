@@ -7,16 +7,16 @@ export const Greeting = (props) => {
       <section className="section-header group">
         <header className="main-header group">
           <ul className="main-header-rep group">
-            <li>M</li>
-            <li>Medium</li>
+            <li><a href="#">M</a></li>
+            <li><a href="#">Medium</a></li>
           </ul>
 
-          <nav className="main-header-nav group">
+          <nav className="main-header-nav group logged-in">
             <a href="#">Write a story</a>
             <a href="#">S</a>
             <a href="#">B</a>
-            <a>{ props.currentUser.username }</a>
-            <button className="main-header-nav-other" onClick= { props.signout }>Sign out</button>
+            <a href="#">{ props.currentUser.username }</a>
+            <a href="#" className="main-header-nav-other" onClick= { props.signout }>Sign out</a>
           </nav>
         </header>
 
@@ -39,12 +39,11 @@ export const Greeting = (props) => {
             <li>Medium</li>
           </ul>
 
-          <nav className="main-header-nav group">
+          <nav className="main-header-nav group not-logged-in">
             <a href="#">Write a story</a>
-            <a href="#">S</a>
-            <a href="#">B</a>
-            <Link className="main-header-nav-other" to='/signup'>Signup</Link>
-            <Link className="main-header-nav-other" to='/signin'>Signin</Link>
+            <Link to='/signup' id="signup">Signup</Link>
+            <p id="slash">/</p>
+            <Link to='/signin' id="signin">Signin</Link>
           </nav>
         </header>
 

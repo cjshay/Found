@@ -1,5 +1,7 @@
 
-
+.main-content{
+  width: 900px;
+}
 .auth {
   width: 518px;
   height: 500px;
@@ -7,6 +9,7 @@
   border: 1px solid gray;
   display: block;
   border-radius: 5px;
+  background: white;
 }
 .auth h3{
   display: block;
@@ -45,7 +48,9 @@
   border-radius: 3px;
   font-size: 16px;
   background: white;
-
+}
+.auth input[type="submit"]:hover{
+  background: lightgray;
 }
 .auth input {
   height: 30px;
