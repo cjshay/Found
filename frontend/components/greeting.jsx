@@ -31,12 +31,13 @@ export const Greeting = (props) => {
       </section>
     );
   } else {
+    // TODO: refactor this into a simpler render
     return (
       <section className="section-header group">
         <header className="main-header group">
           <ul className="main-header-rep group">
-            <li>M</li>
-            <li>Medium</li>
+            <li><a href="#">M</a></li>
+            <li><a href="#">Medium</a></li>
           </ul>
 
           <nav className="main-header-nav group not-logged-in">
