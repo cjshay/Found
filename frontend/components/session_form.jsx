@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -43,8 +42,8 @@ class SessionForm extends React.Component {
                 value={this.state.password}
                 placeholder="password"
                 onChange={this.update('password')} />
+              <p>{ this.props.errors[0] }</p>
             </label>
-            <p>{ this.props.errors[0] }</p>
             <input type="submit" value="Signin"/>
           </form>
         </div>
@@ -60,8 +59,8 @@ class SessionForm extends React.Component {
             </label>
             <label>Password
               <input type="password" placeholder="password" onChange={this.update('password')} />
+              <p>{ this.props.errors[0] }</p>
             </label>
-            <p>{ this.props.errors[0] }</p>
             <input type="submit" value="Signup"/>
           </form>
 

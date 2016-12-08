@@ -18,22 +18,21 @@
   color: green;
   font-size: 16px;
 }
-.story-item-title {
+.story-item-title a {
   margin: 36px 20px 0 20px;
   display: block;
   font-size: 24px;
   font-weight: bold;
 }
-.story-item-content {
+.story-item-content a{
   margin: 20px;
   font-size: 18px;
   display: block;
-  height: 173px;
+  height: 163px;
 }
-.story-detail-link {
+.story-detail-link a{
   font-size: 14px;
   color: gray;
   display: block;
   margin: 20px;
-  margin-bottom: 0;
 }
