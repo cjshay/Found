@@ -13,7 +13,7 @@ class StoryDetail extends React.Component {
             <li className="story-detail-title">{this.props.story.title}</li>
             <li className="story-detail-content" >{this.props.story.content}</li>
           </ul>
-
+          
           <CreateStoryFormContainer />
         </section>
 
