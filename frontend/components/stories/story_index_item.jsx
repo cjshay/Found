@@ -13,7 +13,7 @@ export const StoryIndexItem = (props) => {
         </li>
         <li className="story-item-title">
           <Link
-            to={"/story/" + props.story.id}>Current Title
+            to={"/story/" + props.story.id}>{props.story.title}
           </Link>
         </li>
         <li className="story-item-content">
