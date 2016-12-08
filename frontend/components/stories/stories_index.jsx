@@ -3,7 +3,7 @@ import { StoryIndexItem } from './story_index_item';
 
 const StoryIndexItems = ({ stories }) => {
   return (<ul>
-    { stories.map(story => <StoryIndexItem key={ story.id } story={ story }/>) }
+    { stories.reverse().map(story => <StoryIndexItem key={ story.id } story={ story }/>) }
   </ul>
   );
 };

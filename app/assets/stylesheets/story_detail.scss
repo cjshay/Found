@@ -1,0 +1,23 @@
+.story-detail {
+  width: 659px;
+  height: 351px;
+  background: white;
+  border: 1px solid lightgray;
+  margin: 10px auto;
+  display: block;
+}
+
+
+.story-detail-title {
+  margin: 36px 20px 0 20px;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.story-detail-content{
+  margin: 20px;
+  font-size: 18px;
+  display: block;
+  height: 163px;
+}

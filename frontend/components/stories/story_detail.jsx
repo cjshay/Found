@@ -7,9 +7,9 @@ class StoryDetail extends React.Component {
   render() {
     if (this.props.story !== undefined) {
       return (
-        <ul className="story-item">
-          <li className="story-item-title">Current Title</li>
-          <li className="story-item-content" >{this.props.story.content}</li>
+        <ul className="story-detail">
+          <li className="story-detail-title">Current Title</li>
+          <li className="story-detail-content" >{this.props.story.content}</li>
         </ul>
       );
 

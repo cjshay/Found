@@ -1,5 +1,5 @@
 .section-header {
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid lightgray;
   margin: 0 auto;
   background: white;
 }
@@ -15,6 +15,7 @@
 
 .main-header-rep {
   float: left;
+  padding-top: 2px;
 }
 
 
@@ -28,6 +29,7 @@
 
 .main-header-nav {
   float: right;
+  padding-top: 7px;
 }
 
 .logged-in a:first-child{
@@ -71,16 +73,17 @@
 }
 
 .story-nav{
-  margin: 0 auto;
-  height: 50px;
+  margin: 8px auto;
+  height: 30px;
   width: 900px;
   float: right;
 }
 
 .story-nav a{
   float: left;
-  margin: 10px 20px;
+  margin: auto 20px;
   color: darkgray;
+  padding-top: 7px;
 }
 
 .story-nav a:hover{
