@@ -1,0 +1,39 @@
+.story-item {
+  width: 659px;
+  height: 351px;
+  background: white;
+  border: 1px solid lightgray;
+  margin: 10px auto;
+  display: block;
+}
+
+.story-item-profile {
+  margin: 31px 0 0 65px;
+  display: block;
+}
+.story-item-profile li {
+  float: left;
+}
+.story-item-profile li:first-child {
+  color: green;
+  font-size: 16px;
+}
+.story-item-title {
+  margin: 36px 20px 0 20px;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+.story-item-content {
+  margin: 20px;
+  font-size: 18px;
+  display: block;
+  height: 173px;
+}
+.story-detail-link {
+  font-size: 14px;
+  color: gray;
+  display: block;
+  margin: 20px;
+  margin-bottom: 0;
+}
