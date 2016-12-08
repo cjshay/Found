@@ -1,2 +1,0 @@
-class ResponsesController < ApplicationController
-end

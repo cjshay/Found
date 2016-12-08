@@ -3,11 +3,12 @@
 # Table name: stories
 #
 #  id         :integer          not null, primary key
-#  title      :string           not null
 #  content    :text             not null
 #  author_id  :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  title      :string
+#  parent_id  :integer
 #
 
 class Story < ApplicationRecord
@@ -17,6 +18,14 @@ class Story < ApplicationRecord
     class_name: 'User',
     primary_key: :id,
     foreign_key: :author_id
+
+  has_many :responses,
+    class_name: 'Story',
+    primary_key: :id,
+    foreign_key: :parent_id
     
-  has_many :comments
+  belongs_to :story,
+    class_name: 'Story',
+    primary_key: :id,
+    foreign_key: :parent_id
 end
