@@ -5,6 +5,7 @@ import { createStory } from '../../actions/story_actions';
 
 const mapStateToProps = ({ session }) => {
   return {
+    currentUser: session.currentUser
   };
 };
 

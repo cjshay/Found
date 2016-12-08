@@ -44,10 +44,10 @@ export const receiveStories = (stories) => {
   };
 };
 
-export const receiveStory = (story) => {
+export const receiveStory = (stories) => {
   return {
     type: RECEIVE_STORY,
-    story
+    stories
   };
 };
 

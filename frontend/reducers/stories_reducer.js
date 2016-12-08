@@ -30,9 +30,7 @@ const storyReducer = (state = {}, action) => {
     case RECEIVE_STORIES:
       return action.stories;
     case RECEIVE_STORY:
-      const story = action.story;
-      const stories = merge({}, newState, state);
-      stories[story.id] = story;
+      const stories = merge({}, newState, state, action.stories);
       return stories;
     case RECEIVE_STORY_ERRORS:
       const errors = {errors: action.errors};
