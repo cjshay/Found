@@ -1,3 +1,39 @@
 // Place all the styles related to the Stories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.create-story-form {
+  width: 659px;
+  height: 351px;
+  background: white;
+  border: 1px solid lightgray;
+  margin: 35px auto 10px;
+}
+.create-story-form p {
+  margin: 31px 0 0 65px;
+  color: green;
+  display: block;
+}
+.create-story-form textarea {
+  display: block;
+  margin: 31px 0 0 18px;
+  height: 168px;
+  width: 605px;
+  border: none;
+  resize: none;
+}
+.create-story-form textarea:focus {
+  outline:none;
+}
+.create-story-form input {
+  width: 81px;
+  height: 36px;
+  border: 1px solid green;
+  color: green;
+  background: white;
+  margin-left: 20px;
+  margin-top: 40px;
+  border-radius: 20px;
+  display: block;
+  float: left;
+}

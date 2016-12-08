@@ -27,16 +27,13 @@ class CreateStoryForm extends React.Component {
   render () {
     if (this.props.currentUser !== null) {
       return (
-        <form onSubmit={this.handleSubmit}>
-          <label>Create a Story</label>
-          <input
-            type="text"
-            value={this.state.title}
-            onChange={this.update('title')}></input>
+        <form className="create-story-form" onSubmit={this.handleSubmit}>
+          <p>{this.props.currentUser.username}</p>
           <textarea
             value={this.state.content}
+            placeholder="Write Here..."
             onChange={this.update('content')}></textarea>
-          <input type="submit" value="Create Story"></input>
+          <input type="submit" value="Publish"></input>
         </form>
       );
     } else {

@@ -34,19 +34,19 @@ class SessionForm extends React.Component {
               <input
                 type="text"
                 value={this.state.username}
-                placeholder="your username"
+                placeholder="username"
                 onChange={this.update('username')} />
             </label>
             <label>Password
               <input
                 type="password"
                 value={this.state.password}
-                placeholder="your password"
+                placeholder="password"
                 onChange={this.update('password')} />
             </label>
+            <p>{ this.props.errors[0] }</p>
             <input type="submit" value="Signin"/>
           </form>
-          <p>{ this.props.errors[0] }</p>
         </div>
       );
     } else if (this.props.formType === 'signup') {
@@ -56,15 +56,15 @@ class SessionForm extends React.Component {
 
           <form className="auth-form" onSubmit={this.handleSubmit}>
             <label>Username
-              <input type="text" placeholder="your username" onChange={this.update('username')}/>
+              <input type="text" placeholder="username" onChange={this.update('username')}/>
             </label>
             <label>Password
-              <input type="password" placeholder="your password" onChange={this.update('password')} />
+              <input type="password" placeholder="password" onChange={this.update('password')} />
             </label>
+            <p>{ this.props.errors[0] }</p>
             <input type="submit" value="Signup"/>
           </form>
 
-          <p>{ this.props.errors[0] }</p>
         </div>
       );
       }

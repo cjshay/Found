@@ -1,12 +1,8 @@
 
-.main-content{
-  width: 900px;
-}
 .auth {
   width: 518px;
   height: 500px;
-  margin: 150px auto;
-  border: 1px solid gray;
+  margin: 25px auto;
   display: block;
   border-radius: 5px;
   background: white;
@@ -31,7 +27,16 @@
   display: block;
   margin: 10px auto;
   font-size: 18px;
+  padding-left: 5px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  text-decoration: none;
+  height: 30px;
 
+}
+
+.auth input:focus {
+  outline:none;
 }
 .auth label{
   display: block;
@@ -40,20 +45,26 @@
   font-size: 16px;
 }
 
+
+.auth p {
+  width: 453px;
+  display: block;
+  margin: 10px auto;
+  font-size: 18px;
+  padding-left: 5px;
+  color: red;
+}
+
 .auth input[type="submit"]{
   color: green;
   height: 56px;
-  // margin: 0 auto;
   border: 1px solid green;
   border-radius: 3px;
   font-size: 16px;
   background: white;
+  letter-spacing: 2px;
 }
 .auth input[type="submit"]:hover{
   background: lightgray;
   cursor: pointer;
-}
-.auth input {
-  height: 30px;
-
 }
