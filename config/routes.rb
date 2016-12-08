@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :responses
   root to: 'static_pages#root'
 
   namespace :api, defaults: {format: :json} do

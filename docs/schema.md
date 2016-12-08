@@ -25,6 +25,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key (references users), indexed
+story_id   | integer   | not null, foreign key (references stories), indexed
 content     | text      | not null
 timestamps  | timestamps| not null
 
