@@ -29,7 +29,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     formType: formType(ownProps.location.pathname),
-    processForm: processingForm(dispatch, formType(ownProps.location.pathname))
+    processForm: processingForm(dispatch, formType(ownProps.location.pathname)),
+    signin: (user) => dispatch(signin(user))
   };
 };
 

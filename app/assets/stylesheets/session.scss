@@ -1,7 +1,7 @@
 
 .auth {
   width: 518px;
-  height: 400px;
+  height: 430px;
   margin: 25px auto;
   display: block;
   border-radius: 5px;
@@ -47,7 +47,6 @@
 
 
 .auth p {
-  width: 453px;
   display: block;
   margin: 10px auto;
   font-size: 16px;
@@ -62,9 +61,22 @@
   border-radius: 3px;
   font-size: 16px;
   background: white;
-  letter-spacing: 2px;
+  // letter-spacing: 2px;
+  text-align: left;
+  padding-left: 51px
 }
+
 .auth input[type="submit"]:hover{
   background: lightgray;
+  cursor: pointer;
+}
+
+#guest {
+  display: block;
+  margin: 12px 77px;
+  color: green;
+  width: 120px;
+}
+#guest:hover {
   cursor: pointer;
 }

@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.signInGuest = this.signInGuest.bind(this);
   }
 
   update(property) {
@@ -20,6 +21,11 @@ class SessionForm extends React.Component {
     event.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(() => this.props.router.push('/'));
+  }
+  signInGuest(event) {
+    event.preventDefault();
+    const user = {username: "guest", password: "123456"};
+    this.props.signin(user).then(() => this.props.router.push('/'));
   }
 
   render() {
@@ -44,8 +50,10 @@ class SessionForm extends React.Component {
                 onChange={this.update('password')} />
               <p>{ this.props.errors[0] }</p>
             </label>
-            <input type="submit" value="Signin"/>
+            <input type="submit" value="Sign In"/>
           </form>
+          <button id="guest" onClick={this.signInGuest}>Sign In as Guest</button>
+
         </div>
       );
     } else if (this.props.formType === 'signup') {
@@ -61,8 +69,9 @@ class SessionForm extends React.Component {
               <input type="password" placeholder="password" onChange={this.update('password')} />
               <p>{ this.props.errors[0] }</p>
             </label>
-            <input type="submit" value="Signup"/>
+            <input type="submit" value="Sign Up"/>
           </form>
+          <button id="guest" onClick={this.signInGuest}>Sign In as Guest</button>
 
         </div>
       );
