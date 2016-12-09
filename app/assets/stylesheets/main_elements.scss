@@ -6,7 +6,6 @@
 
 .main-header {
   margin: 0 auto;
-  padding-top: 20px;
   display: block;
   width: 900px;
   height: 50px;
@@ -15,7 +14,10 @@
 
 .main-header-rep {
   float: left;
-  padding-top: 2px;
+  padding-top: 10px;
+}
+.main-header-rep a:last-child {
+  padding-top: 2.5px;
 }
 
 
@@ -29,33 +31,36 @@
 
 .main-header-nav {
   float: right;
-  padding-top: 7px;
+  padding-top: 16px;
 }
 
 .logged-in a:first-child{
-  color: green;
+  color: #02b875;
 }
 .not-logged-in a:hover {
   color: gray;
 }
 
-.main-header-nav a,
-.main-header-nav-other {
+
+.main-header-nav-other,
+.main-header-nav a {
   float: left;
   margin-left: 20px;
   color: darkgray;
 }
 
-.main-header-nav button {
+// .main-header-nav img {
+//   margin: 0 auto;
+//   margin-bottom: 10px;
+// }
 
-}
 // TODO:
 // Clean up without id selectors
 // pseudo content "/"
 //
 #signin,
 #signup {
-  color: green;
+  color: #02b875;
   float: left;
   margin-left: 0
 }
@@ -67,7 +72,7 @@
   content: "/"
 }
 #slash {
-  color: green;
+  color: #02b875;
   float: left;
   padding: 0 2px;
 }
@@ -76,12 +81,11 @@
   margin: 8px auto;
   height: 30px;
   width: 900px;
-  float: right;
 }
 
 .story-nav a{
   float: left;
-  margin: auto 20px;
+  margin: auto 20px auto 0;
   color: darkgray;
   padding-top: 7px;
 }

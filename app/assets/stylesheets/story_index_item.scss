@@ -11,12 +11,20 @@
   margin: 31px 0 0 65px;
   display: block;
 }
-.story-item-profile li {
+.story-item-profile > li {
   float: left;
 }
-.story-item-profile li:first-child {
-  color: green;
+.story-item-profile > li:first-child {
+  color: #02b875;
   font-size: 16px;
+}
+.story-item-date-and-length {
+  margin: auto 10px;
+}
+.story-item-date-and-length li{
+  color: lightgray;
+  font-size: 12px;
+  border: 1px solid black;
 }
 .story-item-title a {
   margin: 36px 20px 0 20px;
@@ -29,6 +37,10 @@
   font-size: 18px;
   display: block;
   height: 163px;
+  overflow: hidden;
+}
+.story-item-content {
+  // width: 100px;
 }
 .story-detail-link a{
   font-size: 14px;

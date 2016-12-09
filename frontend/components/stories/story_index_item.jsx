@@ -4,11 +4,19 @@ import { Link } from 'react-router';
 
 export const StoryIndexItem = (props) => {
   return (
-    <li className="story-item">
+    <li className="story-item group">
       <ul>
         <li>
           <ul className= "story-item-profile group">
             <li>{ props.story.author.username }</li>
+            <ul className="story-item-date-and-length group">
+              <li>
+                {props.story.length} min read
+              </li>
+              <li>
+                { props.story.date.day } { props.story.date.month }
+              </li>
+            </ul>
           </ul>
         </li>
         <li className="story-item-title">

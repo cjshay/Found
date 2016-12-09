@@ -31,14 +31,14 @@ export const Greeting = (props) => {
       <section className="section-header group">
         <header className="main-header group">
           <ul className="main-header-rep group">
-            <li><a href="#">M</a></li>
-            <li><a href="#">Medium</a></li>
+            <li><a href="#"><img src={window.images.logo}/></a></li>
+            <li><a href="#">Found</a></li>
           </ul>
 
           <nav className="main-header-nav group logged-in">
             <a href="#">Write a story</a>
-            <a href="#">S</a>
-            <a href="#">B</a>
+            <a href="#"><img src={window.images.search}/></a>
+            <a href="#"><img src={window.images.bell}/></a>
             <a href="#">{ props.currentUser.username }</a>
             <a href="#" className="main-header-nav-other" onClick= { props.signout }>Sign out</a>
           </nav>
@@ -60,8 +60,8 @@ export const Greeting = (props) => {
       <section className="section-header group">
         <header className="main-header group">
           <ul className="main-header-rep group">
-            <li><a href="#">M</a></li>
-            <li><a href="#">Medium</a></li>
+            <li><a href="#"><img src={window.images.logo}/></a></li>
+            <li><a href="#">Found</a></li>
           </ul>
 
           <nav className="main-header-nav group not-logged-in">
@@ -69,6 +69,7 @@ export const Greeting = (props) => {
             <Link to='/signup' id="signup">Signup</Link>
             <p id="slash">/</p>
             <Link to='/signin' id="signin">Signin</Link>
+            <a href="#"><img src={window.images.search}/></a>
           </nav>
         </header>
 

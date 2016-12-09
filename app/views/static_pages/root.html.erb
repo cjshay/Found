@@ -5,6 +5,13 @@ window.currentUser = <%= render(
   user: current_user
 ).html_safe %>
 <% end %>
+window.images = {
+  search: "<%= image_path('search.png') %>",
+  bell: "<%= image_path('bell.png') %>",
+  comment: "<%= image_path('comment.png') %>",
+  logo: "<%= image_path('logo.png') %>",
+  envelope: "<%= image_path('envelope.png') %>"
+}
 </script>
 
 <div id="root"></div>
