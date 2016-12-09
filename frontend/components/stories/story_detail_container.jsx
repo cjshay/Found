@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   const storyId = pathname.slice(pathname.length - 1);
   return {
     storyId: storyId,
+    story: state.
   };
 };
 
