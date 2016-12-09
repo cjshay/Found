@@ -18,7 +18,7 @@ class StoriesIndex extends React.Component{
       return (<div>Loading...</div>);
     } else {
       return (
-        <section>
+        <section className="main-content-stories">
           <StoryIndexItems stories={ this.props.stories }/>
         </section>
       );

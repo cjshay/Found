@@ -23,9 +23,10 @@ class Story < ApplicationRecord
     class_name: 'Story',
     primary_key: :id,
     foreign_key: :parent_id
-    
+
   belongs_to :story,
     class_name: 'Story',
     primary_key: :id,
-    foreign_key: :parent_id
+    foreign_key: :parent_id,
+    optional: true
 end

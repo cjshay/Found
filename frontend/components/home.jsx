@@ -5,7 +5,7 @@ import React from 'react';
 
 export const Home = (props) => {
   return(
-    <main>
+    <main className="main-content group">
       <CreateStoryFormContainer />
       <StoriesIndexContainer />
 
