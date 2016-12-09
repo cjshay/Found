@@ -4,6 +4,15 @@ export const fetchStories = () => {
     url: '/api/stories'
   });
 };
+
+export const fetchResponses = (parentId) => {
+  return $.ajax ({
+    method: 'GET',
+    url: `/api/stories/${parentId}/responses`,
+    data: { parent_id: parentId }
+  });
+};
+
 export const fetchStory = (storyId) => {
   return $.ajax ({
     method: 'GET',

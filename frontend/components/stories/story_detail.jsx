@@ -1,28 +1,33 @@
 import React from 'react';
 import CreateStoryFormContainer from './create_story_form_container';
+import StoriesIndexContainer from './stories_index_container';
 
 class StoryDetail extends React.Component {
-  componentDidMount() {
-    this.props.fetchStory(this.props.storyId);
-  }
+  // componentDidMount() {
+  //   this.props.fetchStory(this.props.storyId);
+  // <StoriesIndexContainer />
+  // <h2>Make a Response</h2>
+  // <CreateStoryFormContainer parentId={this.props.storyId}/>
+  // }
+  //
+  //     } else {
+  //       return(<div>Loading...asdasd</div>);
+  //     }
+  //   }
+  // }
+  // <StoriesIndexContainer storyId={this.props.storyId}/>
+
   render() {
-    if (this.props.story !== undefined) {
-      return (
-        <section>
-          <ul className="story-detail">
-            <li className="story-detail-title">{this.props.story.title}</li>
-            <li className="story-detail-content" >{this.props.story.content}</li>
-          </ul>
-          
-          <CreateStoryFormContainer />
-        </section>
 
-      );
-
-    } else {
-      return(<div>Loading...</div>);
-    }
+    return (
+      <main>
+          <h2>Make a Response</h2>
+          <CreateStoryFormContainer parentId={this.props.storyId}/>
+          <StoriesIndexContainer parentId={this.props.storyId}/>
+      </main>
+    );
   }
 }
+
 
 export default StoryDetail;

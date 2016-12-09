@@ -1,18 +1,20 @@
 import { connect } from 'react-redux';
 import StoriesIndex from './stories_index';
-import { fetchStories } from '../../actions/story_actions';
-import { selectStories } from '../../reducers/selectors';
+import { fetchStories, fetchResponses, fetchStory } from '../../actions/story_actions';
+import { selectStories, selectResponses } from '../../reducers/selectors';
 
-const mapStateToProps = ({ stories, session }) => {
+const mapStateToProps = ({ stories, session }, ownProps) => {
   return {
     stories: selectStories(stories),
-    currentUser: session.currentUser
+    currentUser: session.currentUser,
+    parentId: ownProps.parentId
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchStories: () => dispatch(fetchStories()),
+    fetchResponses: (parentId) => dispatch(fetchResponses(parentId)),
   };
 };
 

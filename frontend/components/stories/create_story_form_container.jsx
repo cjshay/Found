@@ -3,9 +3,10 @@ import CreateStoryForm from './create_story_form';
 import { createStory } from '../../actions/story_actions';
 
 
-const mapStateToProps = ({ session }) => {
+const mapStateToProps = ({ session }, ownProps) => {
   return {
-    currentUser: session.currentUser
+    currentUser: session.currentUser,
+    parentId: ownProps.parentId
   };
 };
 

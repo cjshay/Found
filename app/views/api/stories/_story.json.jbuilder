@@ -1,5 +1,5 @@
 length = (story.content.split.length / 60) + 1
-json.extract! story, :id, :title, :content
+json.extract! story, :id, :title, :content, :parent_id
 json.set! :author do
   json.set! :username, story.author.username
 end

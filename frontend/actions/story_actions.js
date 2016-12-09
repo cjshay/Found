@@ -11,7 +11,19 @@ import * as APIUtil from '../util/story_api_util';
 export const fetchStories = () => {
   return (dispatch) => {
     return APIUtil.fetchStories().then(
-      (stories) => dispatch(receiveStories(stories)),
+      (stories) => {
+
+        return dispatch(receiveStories(stories));
+      },
+      (errors) => console.log(errors)
+    );
+  };
+};
+
+export const fetchResponses = (parentId) => {
+  return (dispatch) => {
+    return APIUtil.fetchResponses(parentId).then(
+      (responses) => dispatch(receiveStories(responses)),
       (errors) => console.log(errors)
     );
   };
@@ -26,6 +38,7 @@ export const fetchStory = (storyId) => {
   };
 };
 
+
 export const createStory = (story) => {
   return (dispatch) => {
     return APIUtil.createStory(story).then(
@@ -34,6 +47,7 @@ export const createStory = (story) => {
     );
   };
 };
+
 
 // REGULAR ACTION CREATORS
 
