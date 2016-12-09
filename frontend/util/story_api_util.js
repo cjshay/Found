@@ -1,7 +1,8 @@
-export const fetchStories = () => {
+export const fetchStories = (storyId) => {
   return $.ajax ({
     method: 'GET',
-    url: '/api/stories'
+    url: '/api/stories',
+    data: {story_id: storyId}
   });
 };
 

@@ -7,13 +7,14 @@ const mapStateToProps = ({ stories, session }, ownProps) => {
   return {
     stories: selectStories(stories),
     currentUser: session.currentUser,
-    parentId: ownProps.parentId
+    parentId: ownProps.parentId,
+    storyId: ownProps.storyId
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchStories: () => dispatch(fetchStories()),
+    fetchStories: (storyId) => dispatch(fetchStories(storyId)),
     fetchResponses: (parentId) => dispatch(fetchResponses(parentId)),
   };
 };

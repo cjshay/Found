@@ -8,9 +8,9 @@ import * as APIUtil from '../util/story_api_util';
 
 // THUNK ACTION CREATORS
 
-export const fetchStories = () => {
+export const fetchStories = (storyId) => {
   return (dispatch) => {
-    return APIUtil.fetchStories().then(
+    return APIUtil.fetchStories(storyId).then(
       (stories) => {
 
         return dispatch(receiveStories(stories));

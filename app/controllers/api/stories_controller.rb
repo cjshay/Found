@@ -1,6 +1,13 @@
 class Api::StoriesController < ApplicationController
   def index
-    @stories = Story.where(parent_id: nil)
+    if params[:story_id]
+      debugger
+      @stories = Story.where(id: params[:story_id])
+      render :index
+    else
+      debugger
+      @stories = Story.where(parent_id: nil)
+    end
   end
 
   def show
