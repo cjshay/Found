@@ -3,9 +3,10 @@ import { StoryIndexItem } from './story_index_item';
 
 const ResponsesIndexItems = ({ responses }) => {
 
-  return (<ul>
-    { responses.reverse().map(response => <StoryIndexItem key={ response.id } story={ response }/>) }
-  </ul>
+  return (
+    <ul>
+      { responses.reverse().map(response => <StoryIndexItem key={ response.id } story={ response }/>) }
+    </ul>
   );
 };
 
