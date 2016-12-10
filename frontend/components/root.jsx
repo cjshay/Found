@@ -2,7 +2,6 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import React from 'react';
 import { Provider } from 'react-redux';
 import SessionFormContainer from './session_form_container';
-import StoryIndexContainer from './stories/stories_index_container';
 import StoryDetailContainer from './stories/story_detail_container';
 import App from './app';
 import { Home } from './home';

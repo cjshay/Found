@@ -23,7 +23,9 @@ export const fetchStories = (storyId) => {
 export const fetchResponses = (parentId) => {
   return (dispatch) => {
     return APIUtil.fetchResponses(parentId).then(
-      (responses) => dispatch(receiveStories(responses)),
+      (responses) => {
+        return dispatch(receiveStories(responses));
+      },
       (errors) => console.log(errors)
     );
   };

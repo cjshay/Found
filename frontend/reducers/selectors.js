@@ -4,15 +4,10 @@ export const selectStories = (stories) => {
   return values(stories);
 };
 
-export const selectResponses = (stories, storyId) => {
+export const selectResponses = (stories, parentId) => {
   const allStories = values(stories);
-  if (storyId === undefined) {
-    return undefined;
-  }
-  if (allStories.length === 1) {
-    return [];
-  }
+
   return allStories.filter((story) => {
-    return (story.id === storyId);
+    return story.id !== parseInt(parentId);
   });
 };
