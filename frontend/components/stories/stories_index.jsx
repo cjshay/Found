@@ -10,17 +10,17 @@ const StoryIndexItems = ({ stories }) => {
 
 class StoriesIndex extends React.Component{
   componentDidMount() {
-     
+
 
     console.log("parentId: undefined");
     this.props.fetchStories();
   }
 
   render() {
-     
+
 
     if (this.props.stories === undefined || this.props.stories.length === 0) {
-      return (<div>Loading...</div>);
+      return (<div></div>);
     } else {
       return (
         <section className="main-content-stories">

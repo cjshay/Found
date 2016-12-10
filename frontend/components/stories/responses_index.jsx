@@ -4,7 +4,7 @@ import { StoryIndexItem } from './story_index_item';
 const ResponsesIndexItems = ({ responses }) => {
 
   return (
-    <ul>
+    <ul className="response-list group">
       { responses.reverse().map(response => <StoryIndexItem key={ response.id } story={ response }/>) }
     </ul>
   );
@@ -17,10 +17,10 @@ class ResponsesIndex extends React.Component{
 
   render() {
     if (this.props.responses === undefined || this.props.responses.length === 0){
-      return (<div>Loading...</div>);
+      return (<div></div>);
     } else {
       return (
-        <section className="main-content-stories">
+        <section className="response-list-section">
           <ResponsesIndexItems responses={ this.props.responses }/>
         </section>
       );

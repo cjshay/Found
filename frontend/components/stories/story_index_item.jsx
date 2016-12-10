@@ -9,14 +9,16 @@ export const StoryIndexItem = (props) => {
         <li>
           <ul className= "story-item-profile group">
             <li>{ props.story.author.username }</li>
-            <ul className="story-item-date-and-length group">
-              <li>
-                {props.story.length} min read
-              </li>
-              <li>
-                { props.story.date.day } { props.story.date.month }
-              </li>
-            </ul>
+            <li>
+              <ul className="story-item-date-and-length group">
+                <li>
+                  {props.story.length} min read
+                </li>
+                <li>
+                  Dec { props.story.date.day } 
+                </li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li className="story-item-title">

@@ -31,17 +31,24 @@
 }
 .story-item-date-and-length {
   margin: auto 10px;
+  display: block;
+}
+.story-item-date-and-length > li:first-child::after{
+  content: "\00b7";
+  margin-left: 10px;
 }
 .story-item-date-and-length li{
-  color: lightgray;
+  color: gray;
   font-size: 12px;
-  border: 1px solid black;
+  float: left;
+  margin: 5px;
 }
 .story-item-title a {
   margin: 36px 20px 0 20px;
   display: block;
   font-size: 24px;
   font-weight: bold;
+  overflow: hidden;
 }
 .story-item-content a{
   margin: 20px;

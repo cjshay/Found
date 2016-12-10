@@ -22,6 +22,7 @@ export const fetchStory = (storyId) => {
 };
 
 export const createStory = (story) => {
+  story.parent_id = story.parentId;
   return $.ajax ({
     method: 'POST',
     url: `/api/stories`,

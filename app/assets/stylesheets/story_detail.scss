@@ -1,5 +1,5 @@
 .story-detail {
-  width: 659px;
+  width: 700px;
   height: 351px;
   background: white;
   border: 1px solid lightgray;
@@ -23,3 +23,32 @@
   height: 163px;
   width: 500px;
 }
+.response-section {
+  margin: 0 auto;
+  width: 640px;
+
+}
+
+.response-section h2 {
+  margin: 40px auto;
+  color: #02b875;
+  font-size: 18px;
+  display: block;
+  width: 150px;
+}
+
+.response-section form,  .response-list-section {
+  float: left;
+}
+
+// .response-list {
+//   width: 640px;
+// }
+// .response-list > li {
+//   display: block;
+//   float: left;
+// }
+//
+// .create-story-form {
+//   display: block;
+// }

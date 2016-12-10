@@ -15,7 +15,7 @@ class CreateStoryForm extends React.Component {
   handleSubmit (event) {
     event.preventDefault();
     const story = Object.assign({}, this.state);
-    if (this.props.parentId === undefined) {
+    if (this.props.parentId !== undefined) {
       story.parentId = this.props.parentId;
     }
     this.props.createStory(story);

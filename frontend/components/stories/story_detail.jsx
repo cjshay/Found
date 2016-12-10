@@ -19,8 +19,7 @@ class StoryDetail extends React.Component {
             <li className="story-detail-title">{this.props.story.title}</li>
             <li className="story-detail-content" >{this.props.story.content}</li>
           </ul>
-          <h2>Make a Response</h2>
-          <section>
+          <section className= "response-section group">
             <CreateStoryFormContainer parentId={this.props.storyId}/>
             <ResponsesIndexContainer parentId={this.props.storyId}/>
           </section>

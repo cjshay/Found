@@ -25,3 +25,27 @@ Deconstruct
 
 Cool solutions
 - responses are stories
+
+to do
+- reset the state if needed- make sure the wrong stories don't end up in the
+wrong places
+- do css for index page
+  -correct small issues
+  - (size story container if needed)
+    - based on title, text in textarea
+    - and picture etc
+- do css for comments (a link if you want to comment)
+- user show page (upload and show it on stories)
+- upload photo when make a story and show on show page
+- insert/ upload main show page picture
+
+
+less important
+- guest dropdown menu
+- display date
+- create story show page
+  - write a story links to show page
+- pretty text editor and rendering
+
+issues
+- create comment doesn't display after refresh
