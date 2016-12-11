@@ -54,7 +54,7 @@ export const createLike = (storyId) => {
 
 export const deleteLike = (storyId) => {
   return $.ajax ({
-    method: 'POST',
+    method: 'DELETE',
     url: `/api/stories/${storyId}/likes/_`
   });
 };

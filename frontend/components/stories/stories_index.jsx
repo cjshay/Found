@@ -1,9 +1,15 @@
 import React from 'react';
 import { StoryIndexItem } from './story_index_item';
 
-const StoryIndexItems = ({ stories }) => {
-  return (<ul>
-    { stories.reverse().map(story => <StoryIndexItem key={ story.id } story={ story }/>) }
+const StoryIndexItems = ({ stories, createLike, deleteLike, currentUser }) => {
+  return (
+  <ul>
+    { stories.reverse().map(story => <StoryIndexItem
+      key={ story.id }
+      story={ story }
+      currentUser= { currentUser }
+      deleteLike={ deleteLike }
+      createLike={ createLike }/>) }
   </ul>
   );
 };
@@ -21,7 +27,11 @@ class StoriesIndex extends React.Component{
     } else {
       return (
         <section className="main-content-stories">
-          <StoryIndexItems stories={ this.props.stories }/>
+          <StoryIndexItems
+            currentUser= {this.props.currentUser}
+            stories={ this.props.stories }
+            deleteLike= { this.props.deleteLike }
+            createLike={ this.props.createLike }/>
         </section>
       );
     }

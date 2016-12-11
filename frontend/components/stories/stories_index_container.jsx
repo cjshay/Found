@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import StoriesIndex from './stories_index';
-import { fetchStories } from '../../actions/story_actions';
+import { fetchStories, createLike, deleteLike } from '../../actions/story_actions';
 import { selectStories, selectResponses } from '../../reducers/selectors';
 
 const mapStateToProps = ({ stories, session }, ownProps) => {
@@ -14,7 +14,9 @@ const mapStateToProps = ({ stories, session }, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchStories: () => dispatch(fetchStories())
+    fetchStories: () => dispatch(fetchStories()),
+    createLike: (story) => dispatch(createLike(story)),
+    deleteLike: (story) => dispatch(deleteLike(story))
   };
 };
 

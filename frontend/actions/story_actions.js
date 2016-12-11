@@ -50,23 +50,30 @@ export const createStory = (story) => {
   };
 };
 
+
 export const createLike = (story) => {
   return (dispatch) => {
-    const likedStory = Object.assign({}, story);
-    ++ likedStory.likes;
-    dispatch(receiveStory(likedStory));
+    // const likedStory = Object.assign({}, story);
+    // ++ likedStory.likes;
+    // const likedStories = {};
+    // likedStories[likedStory.id] = likedStory;
     return APIUtil.createLike(story.id).then(
-      () => console.log("success"), () => console.log("error"));
+      (likedStory) => dispatch(receiveStory(likedStory)),
+      () => console.log("error")
+    );
   };
 };
 
 export const deleteLike = (story) => {
   return (dispatch) => {
-    const unlikedStory = Object.assign({}, story);
-    -- unlikedStory.likes;
-    dispatch(receiveStory(unlikedStory));
+    // const likedStory = Object.assign({}, story);
+    // ++ likedStory.likes;
+    // const likedStories = {};
+    // likedStories[likedStory.id] = likedStory;
     return APIUtil.deleteLike(story.id).then(
-      () => console.log("success"), () => console.log("error"));
+      (unlikedStory) => dispatch(receiveStory(unlikedStory)),
+      () => console.log("error")
+    );
   };
 };
 

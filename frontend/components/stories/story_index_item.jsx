@@ -3,6 +3,18 @@ import { Link } from 'react-router';
 
 
 export const StoryIndexItem = (props) => {
+  const toggleLike = () => {
+    if (props.currentUser !== null) {
+      if (props.story.likers.includes(props.currentUser.username)) {
+        props.deleteLike(props.story);
+        return toggleLike;
+      } else {
+        props.createLike(props.story);
+        return toggleLike;
+      }
+    }
+
+  };
   return (
     <li className="story-item group">
       <ul>
@@ -30,7 +42,8 @@ export const StoryIndexItem = (props) => {
           to={"/story/" + props.story.id}>Read More...
           </Link>
         </li>
-        <ul>
+        <ul className="story-likes group">
+          <li onClick={toggleLike}><img src={window.images.heart} /></li>
           <li>{props.story.likes}</li>
         </ul>
       </ul>
