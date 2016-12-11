@@ -1,7 +1,7 @@
 import {
   RECEIVE_STORIES,
   RECEIVE_STORY,
-  RECEIVE_STORY_ERRORS }
+  RECEIVE_STORY_ERRORS}
   from '../actions/story_actions';
 import { merge } from 'lodash';
 

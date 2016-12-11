@@ -11,20 +11,14 @@ export const StoryIndexItem = (props) => {
             <li>{ props.story.author.username }</li>
             <li>
               <ul className="story-item-date-and-length group">
-                <li>
-                  {props.story.length} min read
-                </li>
-                <li>
-                  Dec { props.story.date.day } 
-                </li>
+                <li>{props.story.length} min read</li>
+                <li>Dec { props.story.date.day }</li>
               </ul>
             </li>
           </ul>
         </li>
         <li className="story-item-title">
-          <Link
-            to={"/story/" + props.story.id}>{props.story.title}
-          </Link>
+          <Link to={"/story/" + props.story.id}>{props.story.title}</Link>
         </li>
         <li className="story-item-content">
           <Link
@@ -36,6 +30,9 @@ export const StoryIndexItem = (props) => {
           to={"/story/" + props.story.id}>Read More...
           </Link>
         </li>
+        <ul>
+          <li>{props.story.likes}</li>
+        </ul>
       </ul>
     </li>
   );

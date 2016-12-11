@@ -29,4 +29,8 @@ class Story < ApplicationRecord
     primary_key: :id,
     foreign_key: :parent_id,
     optional: true
+
+  has_many :likes
+  has_many :likers,
+    through: :likes
 end

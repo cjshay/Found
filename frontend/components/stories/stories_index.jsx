@@ -10,9 +10,6 @@ const StoryIndexItems = ({ stories }) => {
 
 class StoriesIndex extends React.Component{
   componentDidMount() {
-
-
-    console.log("parentId: undefined");
     this.props.fetchStories();
   }
 

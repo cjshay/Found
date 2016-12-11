@@ -50,6 +50,26 @@ export const createStory = (story) => {
   };
 };
 
+export const createLike = (story) => {
+  return (dispatch) => {
+    const likedStory = Object.assign({}, story);
+    ++ likedStory.likes;
+    dispatch(receiveStory(likedStory));
+    return APIUtil.createLike(story.id).then(
+      () => console.log("success"), () => console.log("error"));
+  };
+};
+
+export const deleteLike = (story) => {
+  return (dispatch) => {
+    const unlikedStory = Object.assign({}, story);
+    -- unlikedStory.likes;
+    dispatch(receiveStory(unlikedStory));
+    return APIUtil.deleteLike(story.id).then(
+      () => console.log("success"), () => console.log("error"));
+  };
+};
+
 
 // REGULAR ACTION CREATORS
 

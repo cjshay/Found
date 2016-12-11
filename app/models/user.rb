@@ -21,6 +21,16 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :author_id
 
+  has_many :likes,
+    class_name: 'Like',
+    primary_key: :id,
+    foreign_key: :liker_id
+
+  has_many :liked_stories,
+    through: :likes,
+    source: :story
+
+
 
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)

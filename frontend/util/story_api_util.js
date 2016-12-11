@@ -44,3 +44,17 @@ export const deleteStory = (storyId) => {
     url: `/api/stories/${storyId}`,
   });
 };
+
+export const createLike = (storyId) => {
+  return $.ajax ({
+    method: 'POST',
+    url: `/api/stories/${storyId}/likes`
+  });
+};
+
+export const deleteLike = (storyId) => {
+  return $.ajax ({
+    method: 'POST',
+    url: `/api/stories/${storyId}/likes/_`
+  });
+};
