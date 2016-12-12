@@ -34,8 +34,8 @@ const storyReducer = (state = {}, action) => {
     case RECEIVE_STORY:
       const stateStories = Object.assign({}, newState, state, action.stories);
       return stateStories;
-    case RECEIVE_RESPONSES:
-      return Object.assign({}, state, action.responses);
+    // case RECEIVE_RESPONSES:
+    //   return Object.assign({}, state, action.responses);
     case RECEIVE_STORY_ERRORS:
       const errors = {errors: action.errors};
       newState = merge({}, state, errors);
