@@ -25,6 +25,9 @@ Deconstruct
 
 Cool solutions
 - responses are stories
+  - nested comments in comments in comments
+- stories are in the index route so the detail page is housed
+  within that (don't need to do an ajax call)
 
 to do
 - reset the state if needed- make sure the wrong stories don't end up in the
@@ -38,6 +41,9 @@ wrong places
 - user show page (upload and show it on stories)
 - upload photo when make a story and show on show page
 - insert/ upload main show page picture
+- styling
+  - cursor pointer on likes
+  - fill in heart when liking
 
 
 

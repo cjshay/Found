@@ -5,6 +5,7 @@ response_ids = story.responses.map{ |response| response.id}
 json.extract! story, :id, :title, :content, :parent_id
 json.set! :author do
   json.set! :username, story.author.username
+  json.set! :id, story.author.id
 end
 json.set! :length, length
 json.set! :date do
@@ -14,3 +15,6 @@ end
 json.set! :likes, story.likes.length
 json.set! :likers, likers
 json.set! :response_ids, response_ids
+
+
+# TODO: Change state shape so that there is just an author id

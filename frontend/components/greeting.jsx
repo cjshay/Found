@@ -39,7 +39,7 @@ export const Greeting = (props) => {
             <a href="#">Write a story</a>
             <a href="#"><img src={window.images.search}/></a>
             <a href="#"><img src={window.images.bell}/></a>
-            <a href="#">{ props.currentUser.username }</a>
+            <Link to={"/users/" + props.currentUser.id}>{ props.currentUser.username }</Link>
             <a href="#" className="main-header-nav-other" onClick= { props.signout }>Sign out</a>
           </nav>
         </header>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-
+// TODO: Current user has no id, change the state shape so that author has just id and points to state shape
 export const StoryIndexItem = (props) => {
   const toggleLike = () => {
     if (props.currentUser !== null) {
@@ -20,7 +20,10 @@ export const StoryIndexItem = (props) => {
       <ul>
         <li>
           <ul className= "story-item-profile group">
-            <li>{ props.story.author.username }</li>
+            <li><Link
+              to={"/users/" + props.story.author.id}>
+              { props.story.author.username }
+            </Link></li>
             <li>
               <ul className="story-item-date-and-length group">
                 <li>{props.story.length} min read</li>
