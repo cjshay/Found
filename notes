@@ -40,12 +40,14 @@ wrong places
 - insert/ upload main show page picture
 
 
+
 less important
 - guest dropdown menu
 - display date
 - create story show page
   - write a story links to show page
 - pretty text editor and rendering
+- make sure that nested comments render correctly
 
 issues
 - create comment doesn't display after refresh
