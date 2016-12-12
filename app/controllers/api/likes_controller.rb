@@ -1,6 +1,5 @@
 class Api::LikesController < ApplicationController
   def create
-    debugger
     @like = Like.new(
     story_id: params[:story_id],
     liker_id: current_user.id

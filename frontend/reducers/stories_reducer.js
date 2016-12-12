@@ -31,8 +31,7 @@ const storyReducer = (state = {}, action) => {
       const stories = merge({}, newState, state, action.stories);
       return stories;
     case RECEIVE_STORY:
-    debugger
-      const stateStories = merge({}, newState, state, action.stories);
+      const stateStories = Object.assign({}, newState, state, action.stories);
       return stateStories;
     case RECEIVE_STORY_ERRORS:
       const errors = {errors: action.errors};
