@@ -1,5 +1,6 @@
 export const RECEIVE_STORIES = "RECEIVE_STORIES";
 export const RECEIVE_STORY = "RECEIVE_STORY";
+export const RECEIVE_RESPONSES = "RECEIVE_RESPONSES";
 export const RECEIVE_STORY_ERRORS = "RECEIVE_STORY_ERRORS";
 
 
@@ -24,7 +25,7 @@ export const fetchResponses = (parentId) => {
   return (dispatch) => {
     return APIUtil.fetchResponses(parentId).then(
       (responses) => {
-        return dispatch(receiveStories(responses));
+        return dispatch(receiveResponses(responses));
       },
       (errors) => console.log(errors)
     );
@@ -91,6 +92,13 @@ export const receiveStory = (stories) => {
   return {
     type: RECEIVE_STORY,
     stories
+  };
+};
+
+export const receiveResponses = (responses) => {
+  return {
+    type: RECEIVE_RESPONSES,
+    responses
   };
 };
 

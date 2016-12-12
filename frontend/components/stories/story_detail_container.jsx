@@ -5,9 +5,8 @@ import { selectStories } from '../../reducers/selectors';
 
 
 const mapStateToProps = (state, ownProps) => {
-  const pathname = ownProps.location.pathname;
-  const storyId = pathname.slice(pathname.length - 1);
-   
+  const storyId = ownProps.params.story_id;
+
   return {
     storyId: storyId,
     story: state.stories[storyId]
