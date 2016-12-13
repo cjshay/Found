@@ -27,6 +27,7 @@ class ResponsesIndex extends React.Component{
     } else {
       return (
         <section className="response-list-section">
+          <h2>Responses</h2>
           <ResponsesIndexItems
             responses={ this.props.responses }
             currentUser={ this.props.currentUser }

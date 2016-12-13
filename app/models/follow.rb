@@ -10,7 +10,16 @@
 #
 
 class Follow < ApplicationRecord
+  validates :follower_id, uniqueness: { scope: :followee_id,
+    message: "Users can follow another user only once" }
   validates :follower_id, :followee_id, presence: true
+  validate(:user_ids_dont_match)
+
+  def user_ids_dont_match
+    if follower_id == followee_id
+      errors[:followee_id].push("User cannot follow self")
+    end
+  end
 
   belongs_to :follower,
     class_name: 'User',
@@ -22,6 +31,6 @@ class Follow < ApplicationRecord
     primary_key: :id,
     foreign_key: :followee_id
 
-  
+
 
 end

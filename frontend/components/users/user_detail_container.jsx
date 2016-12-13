@@ -20,7 +20,7 @@ const mapStateToProps = ({ users, stories, session }, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     createFollow: (followeeId) => dispatch(createFollow(followeeId)),
-    deleteFollow: (followeeId) => dispatch(createFollow(followeeId)),
+    deleteFollow: (followeeId) => dispatch(deleteFollow(followeeId)),
     fetchUserStories: () => dispatch(fetchStories()),
     fetchUser: (userId) => dispatch(fetchUser(userId)),
     createLike: (story) => dispatch(createLike(story)),
