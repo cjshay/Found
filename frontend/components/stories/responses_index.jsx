@@ -1,14 +1,20 @@
 import React from 'react';
 import { StoryIndexItem } from './story_index_item';
 
-const ResponsesIndexItems = ({ responses }) => {
+const ResponsesIndexItems = ({ responses, currentUser, deleteLike, createLike }) => {
 
   return (
     <ul className="response-list group">
-      { responses.reverse().map(response => <StoryIndexItem key={ response.id } story={ response }/>) }
+      { responses.reverse().map(response => <StoryIndexItem
+        key={ response.id }
+        story={ response }
+        currentUser= { currentUser }
+        deleteLike={ deleteLike }
+        createLike={ createLike }/>) }
     </ul>
   );
 };
+
 
 class ResponsesIndex extends React.Component{
   componentDidMount() {
@@ -21,7 +27,11 @@ class ResponsesIndex extends React.Component{
     } else {
       return (
         <section className="response-list-section">
-          <ResponsesIndexItems responses={ this.props.responses }/>
+          <ResponsesIndexItems
+            responses={ this.props.responses }
+            currentUser={ this.props.currentUser }
+            createLike={ this.props.createLike }
+            deleteLike={ this.props.deleteLike }/>
         </section>
       );
     }

@@ -20,7 +20,6 @@ const usersReducer = (state = defaultUsers, action) => {
   const newState = {};
   switch(action.type) {
     case RECEIVE_USER:
-    debugger
       return Object.assign({}, newState, state, action.user);
     case RECEIVE_USERS:
       return Object.assign({}, newState, state, action.users);

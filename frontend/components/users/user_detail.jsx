@@ -2,12 +2,17 @@ import React from 'react';
 import { StoryIndexItem } from '../stories/story_index_item';
 import StoryIndexContainer from '../stories/stories_index_container';
 
-const UserDetailIndexItems = ({ stories }) => {
+const UserDetailIndexItems = ({ stories, currentUser, deleteLike, createLike }) => {
 
   return (
     <ul className="">
       { stories.reverse().map(
-        story => <StoryIndexItem key={ story.id } story={ story }/>
+        story => <StoryIndexItem
+        key={ story.id }
+        story={ story }
+        currentUser= { currentUser }
+        deleteLike={ deleteLike }
+        createLike={ createLike }/>
       )}
     </ul>
   );
@@ -22,7 +27,6 @@ class UserDetail extends React.Component {
     if (this.props.user === undefined) {
       return (<div></div>);
     }
-    debugger
 
     return (
       <main>
@@ -34,7 +38,11 @@ class UserDetail extends React.Component {
             <li>{this.props.user.follows.followee_count} Following </li>
           </ul>
         </section>
-        <UserDetailIndexItems stories={this.props.stories}/>
+        <UserDetailIndexItems
+          stories={this.props.stories}
+          currentUser= { this.props.currentUser }
+          deleteLike={ this.props.deleteLike }
+          createLike={ this.props.createLike }/>
       </main>
     );
   }
