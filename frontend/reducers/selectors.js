@@ -10,3 +10,8 @@ export const selectResponses = (stories, parentId) => {
   .filter(story => story.parent_id === parseInt(parentId));
 
 };
+
+export const selectUserStories = (stories, userId) => {
+  return values(stories)
+  .filter(story => story.author.id === parseInt(userId));
+};

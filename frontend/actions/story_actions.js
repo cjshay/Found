@@ -8,7 +8,7 @@ import * as APIUtil from '../util/story_api_util';
 
 
 // THUNK ACTION CREATORS
-
+// TODO: take out these storyId arguments
 export const fetchStories = (storyId) => {
   return (dispatch) => {
     return APIUtil.fetchStories(storyId).then(
@@ -17,6 +17,15 @@ export const fetchStories = (storyId) => {
         return dispatch(receiveStories(stories));
       },
       (errors) => console.log(errors)
+    );
+  };
+};
+
+export const fetchUserStories = () => {
+  return (dispatch) => {
+    return APIUtil.fetchStories().then(
+      stories => dispatch(receiveStories),
+      errors => console.log(errors)
     );
   };
 };

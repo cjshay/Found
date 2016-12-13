@@ -21,16 +21,25 @@ export const deleteFollow = (followeeId) => {
   };
 };
 
+export const fetchUser = (userId) => {
+  return (dispatch) => {
+    return APIUtil.fetchUser(userId).then(
+      user => dispatch(receiveUser(user)),
+      errors => console.log(errors)
+    );
+  };
+};
+
 export const receiveUsers = (users) => {
   return {
-    action: RECEIVE_USERS,
+    type: RECEIVE_USERS,
     users
   };
 };
 
 export const receiveUser = (user) => {
   return {
-    action: RECEIVE_USER,
+    type: RECEIVE_USER,
     user
   };
 };

@@ -12,22 +12,33 @@ const UserDetailIndexItems = ({ stories }) => {
     </ul>
   );
 };
+class UserDetail extends React.Component {
+  componentDidMount() {
+    this.props.fetchUserStories();
+    this.props.fetchUser(this.props.userId);
+  }
 
-export const UserDetail = ({user, stories}) => {
-  debugger
-  return (
-    <main>
-      <section>
-        <ul>
-          <li>user.username</li>
-          <li>user.description</li>
-          <li>{user.follows.follower_count} Followers</li>
-          <li>{user.follows.followee_count} Following </li>
-        </ul>
-      </section>
-      <UserDetailIndexItems stories={stories}/>
-    </main>
-  );
-};
+  render () {
+    if (this.props.user === undefined) {
+      return (<div></div>);
+    }
+    debugger
+
+    return (
+      <main>
+        <section>
+          <ul>
+            <li>{this.props.user.username}</li>
+            <li>{this.props.user.description}</li>
+            <li>{this.props.user.follows.follower_count} Followers</li>
+            <li>{this.props.user.follows.followee_count} Following </li>
+          </ul>
+        </section>
+        <UserDetailIndexItems stories={this.props.stories}/>
+      </main>
+    );
+  }
+
+}
 
 export default UserDetail;
