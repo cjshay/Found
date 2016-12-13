@@ -62,17 +62,22 @@ class UserDetail extends React.Component {
 
     return (
       <main>
-        <section>
-          <ul>
-            <li>{this.props.user.username}</li>
-            <li>{this.props.user.description}</li>
-            <li>
+        <section className="user-detail-info">
+          <ul className="group">
+            <li className="user-detail-info-content">
               <ul>
-                <li>{this.props.user.follows.follower_count} Followers</li>
-                <li>{this.props.user.follows.followee_count} Following </li>
+                <li id="user-detail-username">{this.props.user.username}</li>
+                <li id="user-detail-description">{this.props.user.description}</li>
+                <li>
+                  <ul className="user-detail-follows group">
+                    <li>{this.props.user.follows.follower_count} Followers</li>
+                    <li>{this.props.user.follows.followee_count} Following </li>
+                  </ul>
+                </li>
+                <li>{this.followButton()}</li>
               </ul>
             </li>
-            <li>{this.followButton()}</li>
+            <li className="user-detail-info-picture"></li>
           </ul>
         </section>
         <UserDetailIndexItems

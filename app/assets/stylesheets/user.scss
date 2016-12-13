@@ -1,0 +1,46 @@
+.user-detail-info {
+  background: white;
+  border-bottom: 2px solid lightgray;
+}
+
+.user-detail-info > ul{
+  margin: 0 auto;
+  width: 661px;
+}
+
+.user-detail-info-content{
+  width: 450px;
+  float: left;
+  margin: 0 20px;
+}
+#user-detail-username {
+  font-size: 32px;
+  margin: 10px 0;
+}
+#user-detail-description {
+  font-size: 16px;
+  margin: 10px 0 25px 0;
+  font-weight: 200;
+  color: gray;
+}
+.user-detail-follows li{
+  float: left;
+  color: darkgray;
+  margin: 22px 18px 22px 0;
+  font-size: 14px;
+}
+.user-detail-info-content button {
+  border: 1px solid #02b875;
+  color: #02b875;
+  padding: 10px 10px;
+  border-radius: 18px;
+  margin-bottom: 36px;
+  font-size: 14px;
+}
+.user-detail-info-content button:hover {
+  cursor: pointer;
+}
+
+// .section-header {
+//   // border-bottom: 1px solid white;
+// }

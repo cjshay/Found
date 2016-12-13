@@ -1,27 +1,89 @@
-.story-detail {
-  width: 700px;
-  height: 351px;
+.story-detail-section {
   background: white;
-  border: 1px solid lightgray;
-  margin: 10px auto;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 35px;
+}
+
+.story-detail {
+  margin: 0 auto;
+  width: 900px;
+}
+.story-detail-profile {
+  margin-bottom: 20px;
+}
+
+.story-detail-profile li{
+  margin: 0 auto;
+}
+
+.detail-profile-username-and-follow li:first-child{
+  float: left;
+  // margin-right: 50px;
+  margin: 35px 0 0 65px;
   display: block;
 }
 
+.detail-profile-username-and-follow button {
+  margin: 31px 0 0 10px;
+  border: 1px solid #02b875;
+  color: #02b875;
+  padding: 4px 10px;
+  border-radius: 18px;
+  font-size: 14px;
+}
+.detail-profile-username-and-follow button:hover {
+  cursor: pointer;
+}
 
+.detail-profile-username-and-follow a {
+  font-size: 16px;
+  // vertical-align: middle;
+}
+.detail-profile-description {
+  color: gray;
+  font-size: 16px;
+}
+
+.detail-story-date > li:first-child::after{
+  content: "\00b7";
+  margin-left: 10px;
+}
+.detail-story-date li{
+  color: gray;
+  font-size: 12px;
+  float: left;
+  margin: 5px;
+}
+.detail-story-date li:first-child {
+  margin-left: 65px;
+}
+
+.story-detail > li {
+  // text-align: center;
+}
 .story-detail-title {
-  margin: 36px 20px 0 20px;
   display: block;
   font-size: 24px;
   font-weight: bold;
-  width: 500px;
+  padding: 0 20px;
+}
+
+.detail-story-likes li{
+  float: left;
+  margin-right: 5px;
+}
+.detail-story-likes {
+  margin: 20px;
+}
+.detail-story-likes img:hover {
+  cursor: pointer;
 }
 
 .story-detail-content{
-  margin: 20px;
-  font-size: 18px;
+  font-size: 21px;
   display: block;
-  height: 163px;
-  width: 500px;
+  line-height: 33px;
+  padding: 40px 20px;
 }
 .response-section {
   margin: 0 auto;

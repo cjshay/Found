@@ -11,7 +11,7 @@
 }
 .story-item {
   width: 659px;
-  height: 351px;
+  // height: 351px;
   background: white;
   border: 1px solid lightgray;
   margin: 10px auto;
@@ -54,7 +54,7 @@
   margin: 20px;
   font-size: 18px;
   display: block;
-  height: 163px;
+  // height: 163px;
   overflow: hidden;
 }
 .story-item-content {
@@ -68,4 +68,11 @@
 }
 .story-likes li{
   float: left;
+  margin-right: 5px;
+}
+.story-likes {
+  margin: 5px 20px;
+}
+.story-likes img:hover {
+  cursor: pointer;
 }
