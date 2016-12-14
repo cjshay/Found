@@ -20,10 +20,8 @@ class StoryDetail extends React.Component {
     if (this.props.currentUser !== null) {
       if (this.props.story.likers.includes(this.props.currentUser.username)) {
         this.props.deleteLike(this.props.story);
-        return this.toggleLike;
       } else {
         this.props.createLike(this.props.story);
-        return this.toggleLike;
       }
     }
 
@@ -33,14 +31,13 @@ class StoryDetail extends React.Component {
     if (this.props.currentUser !== null) {
       if (this.props.story.author.follows.follower_ids.includes(this.props.currentUser.id)) {
         this.props.deleteFollow(this.props.story.author.id);
-        return this.toggleFollow;
       } else {
         this.props.createFollow(this.props.story.author.id)
         .then(user => this.props.receiveStories());
-        return this.toggleFollow;
       }
     }
   }
+
   followButton() {
     if (this.props.currentUser === null) {
       return (<div></div>);
@@ -48,7 +45,6 @@ class StoryDetail extends React.Component {
     const following =
     this.props.story.author.follows.follower_ids
     .includes(this.props.currentUser.id);
-
     if (following) {
       return (<button onClick={this.toggleFollow}>Unfollow</button>);
     }

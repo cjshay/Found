@@ -7,10 +7,17 @@ import { selectStories } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   const storyId = ownProps.params.story_id;
+  const story = state.stories[storyId];
+  let userId = 'id';
+  if (story !== undefined) {
+    userId = story.author.id;
+  }
 
   return {
+    user: state.users[userId],
+    users: state.users,
     storyId: storyId,
-    story: state.stories[storyId],
+    story: story,
     currentUser: state.session.currentUser
   };
 };
