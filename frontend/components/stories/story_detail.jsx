@@ -31,9 +31,10 @@ class StoryDetail extends React.Component {
     if (this.props.currentUser !== null) {
       if (this.props.story.author.follows.follower_ids.includes(this.props.currentUser.id)) {
         this.props.deleteFollow(this.props.story.author.id);
+        return this.toggleFollow;
       } else {
-        this.props.createFollow(this.props.story.author.id)
-        .then(user => this.props.receiveStories());
+        this.props.createFollow(this.props.story.author.id);
+        return this.toggleFollow;
       }
     }
   }

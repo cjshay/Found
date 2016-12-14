@@ -38,6 +38,8 @@ const storyReducer = (state = {}, action) => {
       const errors = {errors: action.errors};
       newState = merge({}, state, errors);
       return newState;
+    // case RECEIVE_USER: 
+    //   return Object.assign({}, newState)
 
     default:
       return state;

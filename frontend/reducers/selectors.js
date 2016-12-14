@@ -26,5 +26,7 @@ export const selectResponses = (stories, parentId) => {
 
 export const selectUserStories = (stories, userId) => {
   return values(stories)
-  .filter(story => story.author.id === parseInt(userId));
+  .filter(story => {
+    return story.author.id === parseInt(userId) && story.parent_id === null;
+  });
 };

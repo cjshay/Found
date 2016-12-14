@@ -33,8 +33,10 @@ class UserDetail extends React.Component {
     if (this.props.currentUser !== null) {
       if (this.props.user.follows.follower_ids.includes(this.props.currentUser.id)) {
         this.props.deleteFollow(this.props.user.id);
+        return this.toggleFollow;
       } else {
         this.props.createFollow(this.props.user.id);
+        return this.toggleFollow;
       }
     }
   }

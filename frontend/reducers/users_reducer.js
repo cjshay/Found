@@ -15,9 +15,8 @@ const defaultUser = {
   }
 };
 const id = 0;
-const defaultUsers = {
-  id: defaultUser
-};
+const defaultUsers = {};
+defaultUsers[defaultUser.id] = defaultUser;
 const usersReducer = (state = defaultUsers, action) => {
   Object.freeze(state);
   const newState = {};
