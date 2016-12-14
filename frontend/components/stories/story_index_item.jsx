@@ -15,6 +15,12 @@ export const StoryIndexItem = (props) => {
     }
 
   };
+  let content;
+  if (props.story.content.length < 120) {
+    content = props.story.content;
+  } else {
+    content = props.story.content.slice(0, 120) + "...";
+  }
   return (
     <li className="story-item group">
       <ul>
@@ -37,7 +43,7 @@ export const StoryIndexItem = (props) => {
         </li>
         <li className="story-item-content">
           <Link
-            to={"/story/" + props.story.id}>{ props.story.content }
+            to={"/story/" + props.story.id}>{ content }
           </Link>
         </li>
         <li className="story-detail-link">
