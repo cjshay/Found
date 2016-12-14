@@ -8,6 +8,8 @@ class StoryDetail extends React.Component {
   constructor(props) {
     super(props);
     this.toggleLike = this.toggleLike.bind(this);
+    this.toggleFollow = this.toggleFollow.bind(this);
+    this.followButton = this.followButton.bind(this);
   }
   componentDidMount() {
 
@@ -27,21 +29,35 @@ class StoryDetail extends React.Component {
 
   }
 
+  toggleFollow() {
+    if (this.props.currentUser !== null) {
+      if (this.props.story.author.follows.follower_ids.includes(this.props.currentUser.id)) {
+        this.props.deleteFollow(this.props.story.author.id);
+        return this.toggleFollow;
+      } else {
+        this.props.createFollow(this.props.story.author.id)
+        .then(user => this.props.receiveStories());
+        return this.toggleFollow;
+      }
+    }
+  }
+  followButton() {
+    if (this.props.currentUser === null) {
+      return (<div></div>);
+    }
+    const following =
+    this.props.story.author.follows.follower_ids
+    .includes(this.props.currentUser.id);
+
+    if (following) {
+      return (<button onClick={this.toggleFollow}>Unfollow</button>);
+    }
+    return (<button onClick={this.toggleFollow}>Follow</button>);
+  }
+
+
   render() {
-
     if (this.props.story !== undefined) {
-      const toggleLike = () => {
-        if (this.props.currentUser !== null) {
-          if (this.props.story.likers.includes(this.props.currentUser.username)) {
-            this.props.deleteLike(this.props.story);
-            return toggleLike;
-          } else {
-            this.props.createLike(this.props.story);
-            return toggleLike;
-          }
-        }
-      };
-
       return (
         <main>
           <section className="story-detail-section">
@@ -57,7 +73,7 @@ class StoryDetail extends React.Component {
                             to={"/users/" + this.props.story.author.id}>
                             { this.props.story.author.username }
                           </Link></li>
-                        <li><button>Follow</button></li>
+                        <li>{this.followButton()}</li>
                         </ul>
                       </li>
                       <li className="detail-profile-description">{this.props.currentUser.description}</li>
@@ -90,9 +106,8 @@ class StoryDetail extends React.Component {
           </section>
         </main>
       );
-    } else {
-      return (<div>Load</div>);
     }
+    return (<div>Load</div>);
   }
 }
 

@@ -3,6 +3,7 @@ import StoriesIndex from './stories_index';
 import { fetchStories, createLike, deleteLike } from '../../actions/story_actions';
 import { selectStories, selectResponses, selectFeedStories } from '../../reducers/selectors';
 
+
 const mapStateToProps = ({ stories, session }, ownProps) => {
   const currentUser = session.currentUser;
   return {
