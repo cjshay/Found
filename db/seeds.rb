@@ -949,3 +949,8 @@ users.each do |user|
     Like.create(liker_id: user.id, story_id: all_stories.sample.id)
   end
 end
+
+guest = User.find_by_username("guest")
+users.each do |user|
+  Follow.create(follower_id: guest.id, followee_id: user.id)
+end
