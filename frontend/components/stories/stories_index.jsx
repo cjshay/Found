@@ -4,7 +4,7 @@ import { StoryIndexItem } from './story_index_item';
 const StoryIndexItems = ({ stories, createLike, deleteLike, currentUser }) => {
   return (
   <ul>
-    { stories.reverse().map(story => <StoryIndexItem
+    { stories.sort().reverse().map(story => <StoryIndexItem
       key={ story.id }
       story={ story }
       currentUser= { currentUser }

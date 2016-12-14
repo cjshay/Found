@@ -12,13 +12,12 @@ const mapStateToProps = (state, ownProps) => {
   if (story !== undefined) {
     userId = story.author.id;
   }
-
   return {
-    user: state.users[userId],
-    users: state.users,
+    stories: state.stories,
     storyId: storyId,
-    story: story,
-    currentUser: state.session.currentUser
+    story: state.stories[storyId],
+    currentUser: state.session.currentUser,
+    currentStory: state.stories.currentStory
   };
 };
 

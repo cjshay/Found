@@ -19,7 +19,9 @@ export const selectFeedStories = (stories, currentUser) => {
 };
 
 export const selectResponses = (stories, parentId) => {
-  return values(stories)
+  const storyValues = values(stories);
+  const storyValuesWithoutCurrentStory = storyValues.slice(0, storyValues.length - 1);
+  return values(storyValuesWithoutCurrentStory)
   .filter(story => story.parent_id === parseInt(parentId));
 
 };

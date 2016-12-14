@@ -2,10 +2,9 @@ import React from 'react';
 import { StoryIndexItem } from './story_index_item';
 
 const ResponsesIndexItems = ({ responses, currentUser, deleteLike, createLike }) => {
-
   return (
     <ul className="response-list group">
-      { responses.reverse().map(response => <StoryIndexItem
+      { responses.sort().reverse().map(response => <StoryIndexItem
         key={ response.id }
         story={ response }
         currentUser= { currentUser }
