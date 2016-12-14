@@ -53,6 +53,12 @@ class StoryDetail extends React.Component {
 
 
   render() {
+    let description;
+    if (this.props.currentUser === null) {
+      description = null;
+    } else {
+      description = this.props.currentUser.description;
+    }
     if (this.props.story !== undefined) {
       return (
         <main>
@@ -72,7 +78,7 @@ class StoryDetail extends React.Component {
                         <li>{this.followButton()}</li>
                         </ul>
                       </li>
-                      <li className="detail-profile-description">{this.props.currentUser.description}</li>
+                      <li className="detail-profile-description">{description}</li>
                       <li>
                         <ul className="detail-story-date group">
                           <li>{this.props.story.length} min read</li>
