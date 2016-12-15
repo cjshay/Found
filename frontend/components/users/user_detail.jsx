@@ -50,9 +50,9 @@ class UserDetail extends React.Component {
     .includes(this.props.currentUser.id);
 
     if (following) {
-      return (<button onClick={this.toggleFollow}>Following</button>);
+      return (<button className="following" onClick={this.toggleFollow}>Following</button>);
     }
-    return (<button onClick={this.toggleFollow}>Follow</button>);
+    return (<button className="follow" onClick={this.toggleFollow}>Follow</button>);
   }
 
   render () {
