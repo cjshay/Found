@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 // TODO: Current user has no id, change the state shape so that author has just id and points to state shape
 export const StoryIndexItem = (props) => {
   const toggleHeart = () => {
-    if (props.story.likers.includes(props.currentUser.username)) {
+    if (props.currentUser !== null && props.story.likers.includes(props.currentUser.username)) {
       return (<li onClick={toggleLike}><img src={window.images.filled_heart} /></li>);
     }
     return (<li onClick={toggleLike}><img src={window.images.heart} /></li>);

@@ -43,12 +43,13 @@ const storyReducer = (state = {}, action) => {
       newState = merge({}, state, errors);
       return newState;
     case RECEIVE_USER:
-      const currentStory = state.currentStory;
-      const authorId = currentStory.author.id;
-      currentStory.author = action.user[authorId];
-      const newStories = {currentStory: currentStory};
-      return Object.assign({}, newState, state, newStories);
-
+      if (state.currentStory !== undefined && state.currentStory.author !== undefined) {
+        const currentStory = state.currentStory;
+        const authorId = currentStory.author.id;
+        currentStory.author = action.user[authorId];
+        const newStories = {currentStory: currentStory};
+        return Object.assign({}, newState, state, newStories);
+      }
     default:
       return state;
   }

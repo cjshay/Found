@@ -58,7 +58,7 @@ but infinitely incandecimal",
   taking lessons in ballet or belly dancing, immersing themselves in the
   wisdom of the East, jogging, learning how to 'relate,' overcoming the 'fear of pleasure.'
 — 	Christopher Lasch ",
-  "My purpose … [is] to point out that professional careers are no more
+  "My purpose is to point out that professional careers are no more
   liberating for women than for men if those careers are governed by the
   requirements of the corporate economy. As long as the workplace is
   dominated by the need to sustain economic growth by producing goods
@@ -928,7 +928,10 @@ Lasch",
   "Thanks for sharing",
   "This is really cool"
 ]
-47.times do
+4.times do
+  Story.create(content: story_content.shuffle.pop, author_id: User.find_by_username("guest").id)
+end
+43.times do
   Story.create(content: story_content.shuffle.pop, author_id: users.sample.id)
 end
 

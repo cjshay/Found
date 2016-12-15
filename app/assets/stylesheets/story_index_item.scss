@@ -51,8 +51,10 @@
   overflow: hidden;
 }
 .story-item-content a{
+  font-size: 23px;
+  font-weight: 300px;
+  color: gray;
   margin: 20px;
-  font-size: 18px;
   display: block;
   // height: 163px;
   overflow: hidden;
@@ -61,7 +63,7 @@
   // width: 100px;
 }
 .story-detail-link a{
-  font-size: 14px;
+  font-size: 12px;
   color: gray;
   display: block;
   margin: 20px;

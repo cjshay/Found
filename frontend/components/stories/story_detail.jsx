@@ -40,16 +40,16 @@ class StoryDetail extends React.Component {
   }
 
   followButton() {
-    if (this.props.currentUser === null) {
+    if (this.props.currentUser === null || this.props.currentStory === undefined) {
       return (<div></div>);
     }
     const following =
     this.props.currentStory.author.follows.follower_ids
     .includes(this.props.currentUser.id);
     if (following) {
-      return (<button onClick={this.toggleFollow}>Unfollow</button>);
+      return (<button className="following"onClick={this.toggleFollow}>Following</button>);
     }
-    return (<button onClick={this.toggleFollow}>Follow</button>);
+    return (<button className="follow" onClick={this.toggleFollow}>Follow</button>);
   }
 
 
