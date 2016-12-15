@@ -17,7 +17,9 @@ class StoryDetail extends React.Component {
     this.props.fetchStory(this.props.storyId);
   }
   toggleHeart () {
-    if (this.props.currentUser !== null && this.props.story.likers.includes(this.props.currentUser.username)) {
+    if (this.props.currentUser === null) {
+      return (<li><Link to="/signin"><img src={window.images.heart} /></Link></li>);
+    } else if (this.props.story.likers.includes(this.props.currentUser.username)) {
       return (<li onClick={this.toggleLike}><img src={window.images.filled_heart} /></li>);
     }
     return (<li onClick={this.toggleLike}><img src={window.images.heart} /></li>);
