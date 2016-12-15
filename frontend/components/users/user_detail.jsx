@@ -42,7 +42,7 @@ class UserDetail extends React.Component {
   }
 
   followButton() {
-    if (this.props.currentUser === null) {
+    if (this.props.currentUser === null || this.props.currentUser.id === this.props.user.id) {
       return (<div></div>);
     }
     const following =
