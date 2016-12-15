@@ -212,7 +212,7 @@ nomadic, directionless and homeless,
 disappear, man, disappear, old man…
 
 i won’t pretend i haven’t thought of it,
-i’ve fucking dreamt of it—life moving like
+i’ve dreamt of it—life moving like
 sand underneath the stomach of a snake—
 its horned eyes are mirrors and, god,
 i can see myself in them, and i see
@@ -636,7 +636,7 @@ because there is no need to be saved.
 I’ve hurt you. I’ve loved you. I’ve mowed
 the front yard. When the stranger wearing a shear white dress
 covered in a million beads
-comes toward me like an over-sexed chandelier suddenly come to life,
+comes toward me like a chandelier suddenly come to life,
 I take her hand in mine. I spin her out
 and bring her in. This is the almond grove
 in the dark slow dance.
@@ -708,7 +708,303 @@ is welcome at night
 
 where not a moth might strike the lonlieness
 
-of an empty room. '"
+of an empty room. '",
+"I know a man who, told by his doctor that he had developed acid reflux,
+ and that it would go away if only he’d lay off the coffee for a few months, said he’d rather keep the reflux.
+Caffeine now holds a place very similar to the one nicotine held a half century ago.
+It is everywhere. The health effects aren’t entirely known. It is, fairly
+ obviously, an addictive substance.
+Though the science is not 'in' on the long-term effects of acceptable
+doses of caffeine; the effects of, say, two cups of coffee a day;
+most of my favorite people take caffeine in unacceptable doses. (
+I’m on my second cup since starting this post a few minutes ago.)
+Interestingly, caffeine has been used as a treatment for some
+illnesses (as nicotine was years ago). Caffeinated enemas have been used to treat cancer, for example.
+'Modern society has lost a sense of sin,' a Catholic website reads.
+I wonder if it has.
+Through this blog, I intend to investigate the cultural lineaments
+of caffeine in one of its most pervasive forms.
+How and why did coffee become ubiquitous, even as cigarettes have
+begun to phase out? How much caffeine is 'healthy '? What are some
+potential long term effects? What have other cultures thought about
+coffee? What are the political consequences of sipping coffee?
+How do I deal with an obnoxious barista? Why are they so obnoxious, anyways?
+More interestingly, to take on the Catholic website:
+what does coffee reveal about the contemporary sense of sin?
+What if chemical dependency has overtaken depredations of the soul,
+and Alcoholics Anonymous has supplanted the Catholic Church?
+(Some of its social functions, anyway.) Well, let’s try the idea on for size.
+Addiction is the new sin. Addicts Anonymous, the new confessional;
+marking the same moral boundary as Peter’s church once did,
+and even receiving state subventions.
+I am not sure this medium makes for a good confessional.
+I am not even sure a confessional is what I want. After all,
+sin has its charms. But buzzed on caffeine as I am, I don’t think I can control myself.
+So, I’ll make you a deal.
+I promise to post with some regularity for the next few months.
+I promise to be engaging if not entertaining.
+All you have to do is check in and be engaged. (Perhaps over an overpriced latte?)
+I will not, however, promise to come to definite conclusions.
+Nor will I absolve you of your transgressions, past or future.
+A new post will be found every other week.
+Today’s intake: 3 sixteen-ounce cups of coffee, with half and half; 1 twelve-ounce mocha.",
+"An old fable has Pope Clement VIII,  forced to give an explanation when he was found sipping 'Satan’s Drink', tersely reply: 'Satan’s Drink is so delicious it would be a sin to let infidels have exclusive use of it.'
+Another myth has Mohammed saying he could unhorse forty men and possess forty women on the strength of a single cup of coffee.
+True or not: these might have been a great anecdotes to use on later clerics and leaders who tremblingly, sometimes preemptively, attempted to outright ban the bean.
+If, as I say, 'addiction is the new sin', it is also a very old one.
+Like any substance worthy of the qualifier 'addictive', coffee has survived several attempts to ban it, and midwifed its own revolutions.
+In politics and religion, famously the two pillars of the state, appropriation is the price of success.
+Thus, while the old-school conservatives of the last century rallied and railed against degenerate drug use (think: Nixon’s 'War on Drugs'), few of them had caffeine in mind. How many, I wonder, thought up strategy over cups of warm dishwater?
+To many of Clement’s contemporaries, however, coffee was the brew of infidels; it was then associated with Islam, having probably originated in Ethiopia and spread under the influence of the Ottoman Empire. For them, a war on drugs meant a war on caffeine. But banning the bean has been an ecumenical exercise.
+In response to seditious poetry, King Charles II tried to shut down coffeehouses by forbidding the sale or consumption of coffee in England. (He reversed the decision less than two-weeks later.) Khair-Beg, governor of Mecca, tried to ban coffee for the same reason, until the sultan of Cairo, an infamous caffeine-addict, reversed the ban.
+Ottoman ruler Murad IV is said to have dressed up as a commoner and lugged around a big sword to decapitate coffee-drinkers. Ibrahim I, Murad’s successor, is said to have instituted beatings as a first time penalty for coffee drinking; second time offenders are said to have been tied into a leather sack and tossed into the Bosporus.
+Prussia’s Frederick the Great, fretting the flow of money from his country because of coffee consumption, proscribed coffeehouses, though he is said to have continued coffee consumption himself, often substituting champagne for water in the brewing process.  He also penned a polemic arguing for the superiority of beer over coffee.
+Caffeine’s largest success has been its unabated proliferation in spite of the disfavor of these traditional power structures.
+Given this resistance, why, or rather how, did coffee survive?
+The traditional answer is simple enough. Because, unlike alcohol, caffeine innervates the mind, leaving its users more prone to talking, instead of tittering, and not incidentally making caffeine far more politically dangerous than alcohol.  In fear of this quality, Grand Vizier Kuprili of Constantinople is said to have closed coffeehouses to preempt subversion during a war; though, it probably didn’t hurt that imams and dervishes had 'raised a loud wail against it, saying the mosques were almost empty, while the coffee houses were always full' at that time. Nothing reinforces the state like religious support.
+Another way of understanding this is to consider the individual experience.
+Viewed with some leeway, coffee consumption is its own religious experience. The meaning of these fables is not in what they say, but in what they don’t. They don’t comment on the dissident history of coffee, the fact coffee has been the preferred drink of radicals and French existentialists. Nor, indeed, do they recognize the  ecstatic jitter of that first sip. (Part of coffee’s rise was undoubtedly due to Islamic monks and mystics who appreciated the energy caffeine provides. And while pseudo-mystics like Aldous Huxley and Timothy Leary credited mescalin-related substances with lifting the veil, I would be curious to find out how much of their work was done under the influence of caffeine.)
+Many  imbibers have ritualized the experience of the morning cup. I know of one man, for example, who has refined the brewing process so far as to have acceptable time limits for how long the water must settle before brewing can begin. A minute too long means restarting.
+Today’s intake: one and a half 30-ounce pots, and one 8-ounce mocha.
+Today’s recipe: use champagne instead of water in your next brew.", "I’ve written before about how theatre can teach trust, empathy, compassion, peaceful conflict resolution, deeper cognitive thinking, delayed gratification, create community and understanding.  The men in Rehabilitation Through the Arts have far fewer disciplinary infractions inside the facility and a dramatically lower recidivism rate upon release than the general population.
+
+
+I often wish I could take the guys to the theatre. You may be able to imagine that a fair number of these men had no access to the arts as children. (That’s a separate post.) We make do with production photos and the occasional 'adapted for television.' Until the cast of Hamilton beautifully and powerfully performed their opening number from the stage of the Richard Rodgers Theatre for the Grammy ceremony, and then performed at the White House. Until Lin-Manuel Miranda free-styled in the Rose Garden with President Obama. Which I promptly burned onto a DVD and waited for clearance to bring into the facility.
+
+
+Tonight we watched Lin-Manuel perform a piece from his ‘concept album’ at the 2009 White House Poetry Jam, and we talked about how that audience received his work. We talked about what happens when people laugh and you’re serious, about the decision to stand one’s ground and follow one’s purpose, which is a hot topic in our rehearsal room as we get closer to sharing our months of work with the population of the prison. 'He gets more confident as he goes.' Some of the men are worried that the population won’t understand Shakespeare; some are worried that they will laugh at the serious parts. Tonight, one of the elders in our circle says, 'We have to tell the story.'
+
+
+We watch a Broadway show in the Big House. Well, four minutes of it. We watch the Grammy performance of 'Alexander Hamilton.' Heads nod to the beat; some of the men snap along. 'Can we watch it again?' We can.
+
+
+We talk about how Hamilton is performed on a bare stage, just like we’ll perform Twelfth Night. 'No one laughed when he said his name this time.' We talk about how Miranda uses language, leverages rhetoric to find each character’s voice, just as Shakespeare did. We talk about working for six years on something you believe in, and we speculated about the long, uncertain nights somewhere in the middle of year three, year four. The men know more than the rest of us can imagine about long, uncertain nights in the middle of a very long bid to survive. I attempt to describe the beautiful specificity of the physical and vocal choices that Daveed Diggs, Okieriete Onaodowan, and Anthony Ramos make to differentiate Lafayette from Jefferson, Mulligan from Madison, Laurens from Philip Hamilton; we’ve been working on character walks.
+
+
+We watch the cast perform 'My Shot' at the White House; we woop. We joyfully behold the son of Puerto Rican parents and the first African American President freestyle in the Rose Garden. We cheer. (One or two of us might tear up, but we don’t need to discuss that.)
+
+
+These gorgeous, thoughtful, wounded men rarely see themselves represented in the world. As they fight to become the men they want to be, they still mostly see themselves in the narrative as junkies, dealers, thugs or the latest Black man brutally gunned down in the streets by the police. According to an Opportunity Agenda study, 'negative mass media portrayals were strongly linked with lower life expectations among black men.' (Who lives? Who dies? Who tells your story?) But tonight, in the midst of our shared creative endeavor, they saw themselves smack in the center of the narrative of creation, possibility, pursuit, and achievement.
+
+
+Representation unabashedly made me weep tonight as I watched a few of the men lean in.
+
+
+Representation matters.
+
+
+Representation is beautiful.
+
+
+And I am not willing to wait for it.",
+"How do you explain cosplay to friends and family, like I really want to start but that involves explaining it to my parents and I don't think ' Mom I want to dress up like fictional characters and go to 'NERD events' ?'
+I use the Disney analogy and the “what about you?” technique.
+
+My Disney analogy is as follows. “You know how you can go to Disneyland and see the Princesses and characters for real? And they act and look exactly like them and all the kids get super excited and take pictures with them? I want to do that for people my age. I want to show them that magic still exists.”  It gets my aunts and uncles way excited really fast.
+
+My ‘What about you?’ technique is I tell my mom or dad about cosplaying and how I really want to be this specific character and I know that I have the skills and abilities to do it all on my own etc etc.
+
+And then they pull that weird face and go “Yeesh weird..”
+
+But then I ask, “What about you? If you could be any character from any movie or show, in any costume ever. Who would you be? Anyone?”
+
+Everyone always has an answer for that.
+
+My dad would be Bruce Lee in the white uniform from Enter the Dragon.
+
+My mom would be Audri Hepburn in the racing day outfit in My Fair Lady.
+
+Then I say, “Now think of how cool it would be if you dressed up like that and other Bruce Lee / My Fair Lady fans freaked out and took pictures of you.”
+
+Bam. They instantly understand your motivation. ", "I swear to every heaven ever imagined,
+if I hear one more dead-eyed hipster
+tell me that art is dead, I will personally summon Shakespeare
+from the grave so he can tell them every reason
+why he wishes he were born in a time where
+he could have a damn Gmail account.
+The day after I taught my mother
+how to send pictures over Iphone she texted
+me a blurry image of our cocker spaniel ten times in a row.
+Don’t you dare try to tell me that that is not beautiful.
+But whatever, go ahead and choose to stay in
+your backwards-hoping-all-inclusive club
+while the rest of us fall in love over Skype.
+Send angry letters to state representatives,
+as we record the years first sunrise so
+we can remember what beginning feels like when
+we are inches away from the trigger.
+Lock yourself away in your Antoinette castle
+while we eat cake and tweet to the whole universe that we did.
+Hashtag you’re a pretentious ass hole.
+Van Gogh would have taken 20 selfies a day.
+Sylvia Plath would have texted her lovers
+nothing but heart eyed emojis when she ran out of words.
+Andy Warhol would have had the worlds weirdest Vine account,
+and we all would have checked it every morning while we
+Snap Chat our coffee orders to the people
+we wish were pressed against our lips instead of lattes.
+This life is spilling over with 85 year olds
+rewatching JFK’s assassination and
+7 year olds teaching themselves guitar over Youtube videos.
+Never again do I have to be afraid of forgetting
+what my fathers voice sounds like.
+No longer must we sneak into our families phonebook
+to look up an eating disorder hotline for our best friend.
+No more must I wonder what people in Australia sound like
+or how grasshoppers procreate.
+I will gleefully continue to take pictures of tulips
+in public parks on my cellphone
+and you will continue to scoff and that is okay.
+But I hope, I pray, that one day you will realize how blessed
+you are to be alive in a moment where you can google search
+how to say I love you in 164 different languages", "i have two names
+two names to make me
+both are my mother’s tongue
+a single decision
+for a single child
+last name
+two consonants removed from treason
+lost in a slight breeze
+        drifting
+shrugged off like a stutter
+people leaving out the t t
+the mic test
+two stabs in the heart of the dark
+no harsh trace of father’s angling
+no trace of that cruelty
+but still
+bred into dense bones and soft skin
+bleeds out with every instance of empathy
+my father, no love
+vanished into pine branches
+scattered into an easterly
+my mother, the rooted
+    swayed
+  swayed
+swayed and never broke
+i learned from them
+  first in
+  first out
+how to live alone
+how to love in shifts
+how to dance with the one that will break your heart
+and how to cut out all your friends
+with its sugar glass pieces
+my heart the pitch pine, shadowed
+my spine the willow, weeping
+but it bends
+    bends
+  bends
+bends and never breaks", "Yankee Hotel Foxtrot
+
+would be a good album to have on vinyl
+
+perhaps i’ll pick it up at the record store tonite
+
+and i think i need life’s problems to be smaller
+
+not this every day struggle
+
+taking care of cats would be OK
+
+after all, they’re only cats
+
+and i can feel this cigarette down to my toes
+
+SURGEON GENERAL’S WARNING:
+
+Smoking Causes Lung Cancer,
+
+Heart Disease, Emphysema,
+
+And May Complicate Pregnancy
+
+yeah i know
+
+what in this world won’t kill you
+
+given enough time
+
+(can’t say i didn’t tell you)
+
+the sun warms my heart
+
+and my face
+
+it is a kind sun today
+
+and it’s already 12:00
+
+time for the daily lunch ritual
+
+though i’m not very hungry
+
+last night i upped my dose
+
+30 milligrams
+
+what does it mean
+
+well, last night it meant i slept a little bit better
+
+waking in a steamy apartment
+
+gotta get out
+
+(of this place)
+
+July 1st will come sooner than i know it
+
+and the next thing,
+
+and the next thing after that
+
+moving Home
+
+to Virginia
+
+it sounds so sweet
+
+but tonight i’m going to an improv show
+
+the final countdown
+
+the final competition
+
+fighting this town has taken all of my energy
+
+and i don’t feel real sometimes
+
+knowing that i’m a different person than before
+
+and nobody really knows me
+
+anymore
+
+it is a soft understanding,
+
+much less a flashbulb light going off
+
+more of how it feels when the morning sun is peaking through your window and sometimes you wake up and the soft rain is pitter-pattering outside
+
+getting slowly out of bed
+
+wash your face
+
+comb your hair
+
+floss your teeth
+
+(none of these things i do)
+
+just a brush of my hand and i’m out the door
+
+kimchi in the duffel bag
+
+along with some vitamin C gummies
+
+and probably a sandwich and an apple"
+
 ]
 comment_content = [
   "Please see me, but see me in my finiteness.",
@@ -931,7 +1227,7 @@ Lasch",
 4.times do
   Story.create(content: story_content.shuffle.pop, author_id: User.find_by_username("guest").id)
 end
-43.times do
+49.times do
   Story.create(content: story_content.shuffle.pop, author_id: users.sample.id)
 end
 

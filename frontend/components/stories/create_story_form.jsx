@@ -5,9 +5,11 @@ class CreateStoryForm extends React.Component {
     super(props);
     this.state = {
       title: '',
-      content: ''
+      content: '',
+      imageFile: "",
+      imageUrl: ""
     };
-
+    this.updateFile = this.updateFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
@@ -19,8 +21,18 @@ class CreateStoryForm extends React.Component {
       story.parentId = this.props.parentId;
     }
     this.props.createStory(story);
-    this.setState({title: '', content: ''});
+    this.setState({title: '', content: '', imageFile: "", imageUrl: ""});
 
+  }
+  updateFile(event) {
+    let file = event.currentTarget.files[0];
+    let fileReader = new FileReader();
+    fileReader.onloadend = function() {
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    }.bind(this);
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
   }
 
   update(property) {
@@ -31,6 +43,19 @@ class CreateStoryForm extends React.Component {
     if (this.props.currentUser !== null) {
       return (
         <form className="create-story-form" onSubmit={this.handleSubmit}>
+          <span>
+            <div>
+              <input
+                type="file"
+                onChange={ this.updateFile }>
+              </input>
+              <img src={ this.state.imageUrl }/>
+              <div>
+                <li>0</li>
+                <li>Add Image</li>
+              </div>
+            </div>
+          </span>
           <p>{this.props.currentUser.username}</p>
           <textarea
             value={this.state.content}
