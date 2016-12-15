@@ -30,7 +30,10 @@ export const selectResponses = (stories, parentId) => {
 
 export const selectUserStories = (stories, userId) => {
   const storyValues = values(stories);
-  const storyValuesWithoutCurrentStory = storyValues.slice(0, storyValues.length - 1);
+  let storyValuesWithoutCurrentStory = storyValues;
+  if (stories.currentStory !== undefined) {
+    storyValuesWithoutCurrentStory = storyValues.slice(0, storyValues.length - 1);
+  }
   return storyValuesWithoutCurrentStory
   .filter(story => {
     return story.author !== undefined && story.author.id === parseInt(userId) && story.parent_id === null;

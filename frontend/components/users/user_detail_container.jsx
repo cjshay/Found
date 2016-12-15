@@ -8,7 +8,7 @@ import { createLike, deleteLike } from '../../actions/story_actions';
 
 const mapStateToProps = ({ users, stories, session }, ownProps) => {
   const userId = ownProps.params.user_id;
-
+  
   return {
     user: users[userId],
     userId: userId,
