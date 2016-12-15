@@ -10,10 +10,17 @@ class StoryDetail extends React.Component {
     this.toggleLike = this.toggleLike.bind(this);
     this.toggleFollow = this.toggleFollow.bind(this);
     this.followButton = this.followButton.bind(this);
+    this.toggleHeart = this.toggleHeart.bind(this);
   }
   componentDidMount() {
 
     this.props.fetchStory(this.props.storyId);
+  }
+  toggleHeart () {
+    if (this.props.currentUser !== null && this.props.story.likers.includes(this.props.currentUser.username)) {
+      return (<li onClick={this.toggleLike}><img src={window.images.filled_heart} /></li>);
+    }
+    return (<li onClick={this.toggleLike}><img src={window.images.heart} /></li>);
   }
 
   toggleLike() {
@@ -40,7 +47,9 @@ class StoryDetail extends React.Component {
   }
 
   followButton() {
-    if (this.props.currentUser === null || this.props.currentStory === undefined) {
+    if (this.props.currentUser === null ||
+      this.props.currentStory === undefined ||
+      this.props.currentUser.id === this.props.currentStory.author.id) {
       return (<div></div>);
     }
     const following =
@@ -96,7 +105,7 @@ class StoryDetail extends React.Component {
               <li className="story-detail-content" >{this.props.story.content}</li>
               <li>
                 <ul className="detail-story-likes group">
-                  <li onClick={this.toggleLike}><img src={window.images.heart} /></li>
+                  {this.toggleHeart()}
                   <li>{this.props.story.likes}</li>
                 </ul>
               </li>
