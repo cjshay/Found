@@ -2,7 +2,7 @@ import React from 'react';
 import { StoryIndexItem } from '../stories/story_index_item';
 import StoryIndexContainer from '../stories/stories_index_container';
 
-const UserDetailIndexItems = ({ stories, currentUser, deleteLike, createLike }) => {
+const UserDetailIndexItems = ({ stories, currentUser, deleteLike, createLike, deleteStory }) => {
 
   return (
     <ul className="">
@@ -10,6 +10,7 @@ const UserDetailIndexItems = ({ stories, currentUser, deleteLike, createLike }) 
         story => <StoryIndexItem
         key={ story.id }
         story={ story }
+        deleteStory= {deleteStory}
         currentUser= { currentUser }
         deleteLike={ deleteLike }
         createLike={ createLike }/>
@@ -82,6 +83,7 @@ class UserDetail extends React.Component {
         </section>
         <UserDetailIndexItems
           stories={this.props.stories}
+          deleteStory={this.props.deleteStory}
           currentUser= { this.props.currentUser }
           deleteLike={ this.props.deleteLike }
           createLike={ this.props.createLike }/>

@@ -57,3 +57,24 @@ less important
 
 issues
 - create comment doesn't display after refresh
+
+development:
+  s3_bucket: "found-medium-dev"
+
+production:
+  s3_bucket: "found-medium-pro"
+
+s3_region:  "us-east-1"
+s3_access_key_id: "AKIAIAQU2X56YL6II2TA"
+s3_secret_access_key: "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"
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV["s3_bucket"],
+    :access_key_id => ENV["s3_access_key_id"],
+    :secret_access_key => ENV["s3_secret_access_key"],
+    :s3_region => ENV["s3_region"]
+  }
+}
+has_attached_file :image, default_url: "missing.jpg"
+validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/ 

@@ -25,7 +25,7 @@
   font-size: 18px;
 }
 .create-story-form textarea:focus {
-  outline:none;
+  outline: none;
 }
 .create-story-form input {
   width: 81px;
@@ -41,4 +41,39 @@
 }
 .create-story-form input:hover {
   cursor: pointer;
+}
+.update-story {
+  background: white;
+  height: 1000px;
+}
+.update-story textarea:focus {
+  outline: none;
+}
+
+.update-story textarea {
+  display: block;
+  margin: 0 auto;
+  height: 168px;
+  width: 900px;
+  border: none;
+  resize: none;
+  font-size: 21px;
+  padding: 35px 0 0 0;
+  text-align: center;
+}
+.update-story button {
+  border: 1px solid #02b875;
+  padding: 10px 10px;
+  border-radius: 18px;
+  margin-bottom: 36px;
+  font-size: 14px;
+  margin-left: 50%;
+  margin-right: 50%;
+
+}
+
+.update-story button:hover {
+  cursor: pointer;
+  background: #02b875;
+  color: white;
 }

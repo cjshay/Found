@@ -68,10 +68,10 @@ export const updateStory = (story) => {
     );
   };
 };
-export const deleteStory = (story) => {
+export const deleteStory = (storyId) => {
   return (dispatch) => {
-    return APIUtil.deleteStory(story).then(
-      () => dispatch(removeStory(story.id)),
+    return APIUtil.deleteStory(storyId).then(
+      () => dispatch(removeStory(storyId)),
       (errors) => dispatch(receiveStoryErrors(errors.responseJSON))
     );
   };

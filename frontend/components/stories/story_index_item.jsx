@@ -24,20 +24,19 @@ export const StoryIndexItem = (props) => {
 
   };
   const deleteStory = () => {
-    props.deleteStory(props.story);
+    props.deleteStory(props.story.id);
   };
-  const editStoryForm = () => {
-    
-  };
-  const deleteAndEdit = () => {
+
+  const deleteAndUpdate = () => {
     if (props.currentUser !== null && props.currentUser.id === props.story.author.id) {
       return (
-        <ul>
+        <ul className="update-delete group">
           <li>
-            <button onClick={editStoryForm}>Edit</button>
+            <button className="update-button">
+              <Link to={"/story/" + props.story.id + "/edit"}>Edit</Link></button>
           </li>
           <li>
-            <button onClick={deleteStory}>Delete</button>
+            <button className="delete-button" onClick={deleteStory}>Delete</button>
           </li>
         </ul>
       );
@@ -84,8 +83,8 @@ export const StoryIndexItem = (props) => {
           {toggleHeart()}
           <li>{props.story.likes}</li>
         </ul>
+        {deleteAndUpdate()}
       </ul>
-      {deleteAndEdit}
     </li>
   );
 };

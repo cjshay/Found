@@ -27,8 +27,7 @@ const mapDispatchToProps = (dispatch) => {
     createLike: (story) => dispatch(createLike(story)),
     deleteLike: (story) => dispatch(deleteLike(story)),
     createFollow: (followeeId) => dispatch(createFollow(followeeId)),
-    deleteFollow: (followeeId) => dispatch(deleteFollow(followeeId)),
-    receiveStories: () => dispatch(receiveStories())
+    deleteFollow: (followeeId) => dispatch(deleteFollow(followeeId))
   };
 };
 

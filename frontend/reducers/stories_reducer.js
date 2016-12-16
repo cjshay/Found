@@ -45,8 +45,8 @@ const storyReducer = (state = {}, action) => {
       return newState;
     case REMOVE_STORY:
       const newStories = Object.assign({}, state);
-      debugger
-      delete state[action.storyId];
+      delete newStories[action.storyId];
+      return newStories;
 
     case RECEIVE_USER:
       if (state.currentStory !== undefined && state.currentStory.author !== undefined) {

@@ -73,11 +73,37 @@
   margin-right: 5px;
 }
 .story-likes {
-  margin: 10px 20px;
+  margin: 19px 20px;
+  width: 200px;
+  display: inline-block;
 }
 .story-likes img:hover {
   cursor: pointer;
 }
 .heart:hover {
 
+}
+.update-delete {
+  width: 200px;
+  float: right;
+  vertical-align: top;
+}
+.update-button,
+.delete-button {
+  float: right;
+  border: 1px solid #02b875;
+  color: #02b875;
+  padding: 4px 10px;
+  border-radius: 18px;
+  font-size: 14px;
+  margin: 10px 10px;
+}
+.update-button {
+  margin-right: 20px;
+}
+.update-button:hover,
+.delete-button:hover {
+  cursor: pointer;
+  background: #02b875;
+  color: white;
 }

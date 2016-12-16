@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import SessionFormContainer from './session_form_container';
 import StoryDetailContainer from './stories/story_detail_container';
 import UserDetailContainer from './users/user_detail_container';
+import UpdateStoryFormContainer from './stories/update_story_form_container';
 import App from './app';
 import { Home } from './home';
 
@@ -27,6 +28,7 @@ const Root = ({ store }) => {
             onEnter= {_redirectIfSignedIn}/>
           <Route path="/story/:story_id" component={StoryDetailContainer}/>
           <Route path="/users/:user_id" component={UserDetailContainer}/>
+          <Route path="/story/:story_id/edit" component={UpdateStoryFormContainer}/>
         </Route>
       </Router>
     </Provider>
