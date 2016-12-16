@@ -13,6 +13,9 @@
 class User < ApplicationRecord
   attr_reader :password
 
+  has_attached_file :image, default_url: "missing.png"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
   validates :username, :password_digest, :session_token, presence: true, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
 
