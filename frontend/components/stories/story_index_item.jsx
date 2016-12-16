@@ -54,6 +54,7 @@ export const StoryIndexItem = (props) => {
       <ul>
         <li>
           <ul className= "story-item-profile group">
+            <li><img className="story-item-user-image" src={ props.story.author.image_url }/></li>
             <li><Link
               to={"/users/" + props.story.author.id}>
               { props.story.author.username }

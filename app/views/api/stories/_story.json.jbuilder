@@ -2,7 +2,7 @@ length = (story.content.split.length / 60) + 1
 likers = story.likers.map{ |liker| liker.username }
 response_ids = story.responses.map{ |response| response.id}
 
-json.extract! story, :id, :title, :content, :parent_id
+json.extract! story, :id, :title, :content, :parent_id, :image_url
 json.set! :author do
   json.partial! 'api/users/user', user: story.author
   # json.set! :username, story.author.username

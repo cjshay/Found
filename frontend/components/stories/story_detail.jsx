@@ -79,11 +79,11 @@ class StoryDetail extends React.Component {
             <ul className="story-detail">
               <li>
                 <ul className= "story-detail-profile group">
-                  <li className="detail-profile-picture"></li>
                   <li className="detail-profile-info">
                     <ul>
                       <li>
                         <ul className="detail-profile-username-and-follow group">
+                          <li><img className="story-detail-user-image" src={ this.props.story.author.image_url }/></li>
                           <li><Link
                             to={"/users/" + this.props.story.author.id}>
                             { this.props.story.author.username }
@@ -103,7 +103,7 @@ class StoryDetail extends React.Component {
                   </li>
                 </ul>
               </li>
-
+              <li><img className="story-detail-image" src={ this.props.story.image_url }/></li>
               <li className="story-detail-title">{this.props.story.title}</li>
               <li className="story-detail-content" >{this.props.story.content}</li>
               <li>

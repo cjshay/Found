@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class CreateStoryForm extends React.Component {
   constructor(props) {
@@ -6,10 +7,7 @@ class CreateStoryForm extends React.Component {
     this.state = {
       title: '',
       content: '',
-      imageFile: "",
-      imageUrl: ""
     };
-    this.updateFile = this.updateFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
@@ -28,16 +26,6 @@ class CreateStoryForm extends React.Component {
     this.setState({title: '', content: '', imageFile: "", imageUrl: ""});
 
   }
-  updateFile(event) {
-    let file = event.currentTarget.files[0];
-    let fileReader = new FileReader();
-    fileReader.onloadend = function() {
-      this.setState({ imageFile: file, imageUrl: fileReader.result });
-    }.bind(this);
-    if (file) {
-      fileReader.readAsDataURL(file);
-    }
-  }
 
   update(property) {
     return event => this.setState({ [property]: event.target.value});
@@ -45,31 +33,18 @@ class CreateStoryForm extends React.Component {
 
   render () {
     if (this.props.currentUser !== null) {
-      let previewToggle = "img-preview";
-      if ( this.state.imageUrl !== "" ) {
-        previewToggle = "img-preview";
-      }
       return (
-        <form className="create-story-form" onSubmit={this.handleSubmit}>
-          <section className="image-container">
-            <div className="image-area">
-              <input className="image-file-input"
-                type="file"
-                onChange={ this.updateFile }>
-              </input>
-              <img className={previewToggle} src={ this.state.imageUrl }/>
-            </div>
-          </section>
-          <p>{this.props.currentUser.username}</p>
-          <textarea
-            value={this.state.content}
-            placeholder="Write Here..."
-            onChange={this.update('content')}></textarea>
-          <input type="submit" value="Publish"></input>
-        </form>
-      );
-    } else {
-      return (<div></div>);
+          <form className="create-story-form" onSubmit={this.handleSubmit}>
+            <p><Link to={"/users/" + this.props.currentUser.id}>{this.props.currentUser.username}</Link></p>
+            <textarea
+              value={this.state.content}
+              placeholder="Write Here..."
+              onChange={this.update('content')}></textarea>
+            <input type="submit" value="Publish"></input>
+          </form>
+        );
+      } else {
+        return (<div></div>);
     }
   }
 }

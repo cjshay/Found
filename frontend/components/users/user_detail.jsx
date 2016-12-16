@@ -67,6 +67,7 @@ class UserDetail extends React.Component {
           <ul className="group">
             <li className="user-detail-info-content">
               <ul>
+                <li><img className="user-detail-image" src={ this.props.user.image_url }/></li>
                 <li id="user-detail-username">{this.props.user.username}</li>
                 <li id="user-detail-description">{this.props.user.description}</li>
                 <li>

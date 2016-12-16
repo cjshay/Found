@@ -1224,14 +1224,38 @@ Lasch",
   "Thanks for sharing",
   "This is really cool"
 ]
+
+users_pictures = users.dup
+21.times do |i|
+  if i < 9
+    num = "0#{i + 1}"
+  elsif i >= 9
+    num = "#{i + 1}"
+  end
+  debugger
+  users_pictures.shuffle.pop.update(
+  image_url: "/assets/user_pictures/user_#{num}.png")
+end
 4.times do
   Story.create(content: story_content.shuffle.pop, author_id: User.find_by_username("guest").id)
 end
-49.times do
+(story_content.length - 4).times do
   Story.create(content: story_content.shuffle.pop, author_id: users.sample.id)
 end
 
 stories = Story.all
+
+stories_pictures = stories.dup
+stories_pictures.length.times do |i|
+  if i < 9
+    num = "0#{i + 1}"
+  elsif i >= 9
+    num = "0#{i + 1}"
+  end
+  user = stories_pictures.shuffle.pop
+  debugger
+  user.update(image_url: "/assets/story_pictures/story_#{num}.png")
+end
 
 214.times do
   Story.create(content: comment_content.shuffle.pop, author_id: users.sample.id, parent_id: stories.sample.id)
