@@ -1244,7 +1244,7 @@ end
 stories = Story.all.map{|story| story}
 
 stories_pictures = stories.dup.shuffle
-stories_pictures.length.times do |i|
+(stories_pictures.length - 3).times do |i|
   if i < 10
     num = "0#{i}"
   elsif i >= 10
