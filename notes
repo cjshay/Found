@@ -127,3 +127,10 @@ if (this.props.currentUser !== null) {
         <img className={previewToggle} src={ this.state.imageUrl }/>
       </div>
     </section>
+
+
+
+TODO:
+-
+-
+-
