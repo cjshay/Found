@@ -17,5 +17,5 @@ production:
   s3_bucket: "found-medium-pro"
 
 s3_region:  "us-east-1"
-s3_access_key_id: "AKIAIAQU2X56YL6II2TA"
-s3_secret_access_key: "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"
+s3_access_key_id: "AKIAJCNR3UZ5WTRVHB3Q"
+s3_secret_access_key: "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"

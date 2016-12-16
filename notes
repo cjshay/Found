@@ -67,67 +67,6 @@ production:
 s3_region:  "us-east-1"
 s3_access_key_id: "AKIAIAQU2X56YL6II2TA"
 s3_secret_access_key: "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"
-config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV["s3_bucket"],
-    :access_key_id => ENV["s3_access_key_id"],
-    :secret_access_key => ENV["s3_secret_access_key"],
-    :s3_region => ENV["s3_region"]
-  }
-}
-has_attached_file :image, default_url: "missing.jpg"
-validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
-
-updateFile(event) {
-  let file = event.currentTarget.files[0];
-  let fileReader = new FileReader();
-  fileReader.onloadend = function() {
-    this.setState({ imageFile: file, imageUrl: fileReader.result });
-  }.bind(this);
-  if (file) {
-    fileReader.readAsDataURL(file);
-  }
-}
-
-if (this.props.currentUser !== null) {
-  let previewToggle = "img-preview";
-  if ( this.state.imageUrl !== "" ) {
-    previewToggle = "img-preview";
-  }
-
-  <section className="image-container">
-    <div className="image-area">
-      <input className="image-file-input"
-        type="file"
-        onChange={ this.updateFile }>
-      </input>
-      <img className={previewToggle} src={ this.state.imageUrl }/>
-    </div>
-  </section>
-
-  imageFile: "",
-  imageUrl: ""
-
-  if (this.props.currentUser !== null) {
-    let previewToggle = "img-preview";
-    if ( this.state.imageUrl !== "" ) {
-      previewToggle = "img-preview";
-    }
-
-    <img className={previewToggle} src={ this.state.imageUrl }/>
-
-
-    <section className="image-container">
-      <div className="image-area">
-        <input className="image-file-input"
-          type="file"
-          onChange={ this.updateFile }>
-        </input>
-        <img className={previewToggle} src={ this.state.imageUrl }/>
-      </div>
-    </section>
-
 
 
 TODO:

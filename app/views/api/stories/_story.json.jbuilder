@@ -2,9 +2,9 @@ length = (story.content.split.length / 60) + 1
 likers = story.likers.map{ |liker| liker.username }
 response_ids = story.responses.map{ |response| response.id}
 
-json.extract! story, :id, :title, :content, :parent_id
-if story.image_url
-  json.image_url asset_path(story.image_url)
+json.extract! story, :id, :title, :content, :parent_id, :image
+if story.image.url != "no_image"
+  json.image_url asset_path(story.image.url)
 end
 
 json.set! :author do

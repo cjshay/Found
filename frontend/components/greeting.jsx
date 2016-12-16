@@ -37,18 +37,13 @@ export const Greeting = (props) => {
 
           <nav className="main-header-nav group logged-in">
             <Link to ={"/"}>Write a story</Link>
-            <a href="#"><img src={window.images.search}/></a>
-            <a href="#"><img src={window.images.bell}/></a>
             <Link to={"/users/" + props.currentUser.id}>{ props.currentUser.username }</Link>
             <a href="#" className="main-header-nav-other" onClick= { props.signout }>Sign out</a>
           </nav>
         </header>
 
         <nav className="story-nav group">
-          <Link to='/'>For You</Link>
-          <Link to='/'>Editor's Picks</Link>
-          <Link to='/'>Humor</Link>
-          <Link to='/'>Top Stories</Link>
+          <Link to='/'>Your Stories</Link>
         </nav>
 
 

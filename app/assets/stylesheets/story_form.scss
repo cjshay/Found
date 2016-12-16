@@ -4,7 +4,6 @@
 
 .create-story-form {
   width: 659px;
-  height: 351px;
   background: white;
   border: 1px solid lightgray;
   margin: 35px auto 10px;
@@ -22,7 +21,7 @@
 }
 .create-story-form textarea {
   display: block;
-  margin: 31px 38px 0 18px;
+  margin: 31px 38px 0 20px;
   height: 168px;
   width: 605px;
   border: none;
@@ -38,8 +37,7 @@
   border: 1px solid #02b875;
   color: #02b875;
   background: white;
-  margin-left: 20px;
-  margin-top: 0px;
+  margin: 15px 20px;
   border-radius: 20px;
   display: block;
   float: left;
@@ -49,6 +47,65 @@
   background: #02b875;
   color: white;
 }
+
+
+.image-container {
+  float: left;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 400px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.image-area {
+  border: 2px solid gray;
+  height: 90%;
+  width: 95%;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+.image-area li {
+  list-style: none;
+}
+
+
+.image-area:hover {
+  border: 2px solid gray;
+}
+#image-file-input {
+  height: 180px;
+  width: 380px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.img-preview {
+  height: 180px;
+  width: 380px;
+}
+
+.disp-none {
+  display: none;
+}
+
+.img-none {
+  display: none;
+}
+
+.img-absolute {
+  height: 180px;
+  width: 380px;
+  margin-top: 40px;
+}
+
+
+
+
+
 .update-story {
   background: white;
   height: 1000px;
@@ -77,7 +134,6 @@
   margin-left: 50%;
   margin-right: 50%;
   margin-top: 10px;
-
 }
 
 .update-story button:hover {
