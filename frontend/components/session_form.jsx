@@ -32,7 +32,7 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'signin') {
       return (
         <div className="auth">
-          <h3>Sign In to Medium</h3>
+          <h3>Sign In to Found</h3>
 
           <form className="auth-form" onSubmit={this.handleSubmit}>
             <label>Username
@@ -59,7 +59,7 @@ class SessionForm extends React.Component {
     } else if (this.props.formType === 'signup') {
       return (
         <div className="auth">
-          <h3>Create an account on Medium</h3>
+          <h3>Create an account on Found</h3>
 
           <form className="auth-form" onSubmit={this.handleSubmit}>
             <label>Username

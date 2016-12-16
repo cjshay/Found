@@ -1,12 +1,12 @@
-#Medium
+#Found
 
 ## Hosting on Heroku
 
-[Medium clone](https://medium-cloned.herokuapp.com/)
+[Found](https://found-medium.herokuapp.com/)
 
 ##Minimum Viable Product
 
-Medium is a web application inspired by Medium build using a Ruby on Rails backend with a javascript React/Redux frontend. This project will, by the end of Week 9, include the following:
+Found is a web application inspired by Medium build using a Ruby on Rails backend with a javascript React/Redux frontend. This project will, by the end of Week 9, include the following:
 
   Live hosting on Heroku
 

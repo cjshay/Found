@@ -4,7 +4,6 @@ import configureStore from './store/store.js';
 import Root from './components/root';
 import { fetchStories } from './util/story_api_util';
 
-window.fetchStories = fetchStories;
 
 
 document.addEventListener('DOMContentLoaded', () => {

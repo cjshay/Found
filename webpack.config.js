@@ -1,6 +1,6 @@
 module.exports = {
   context: __dirname,
-  entry: './frontend/medium.jsx',
+  entry: './frontend/found.jsx',
   output: {
     path: 'app/assets/javascripts',
     filename: 'bundle.js',
