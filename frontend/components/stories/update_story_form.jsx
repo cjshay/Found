@@ -20,10 +20,9 @@ class UpdateStory extends React.Component {
   }
 
   handleSubmit() {
-    debugger
     const story = Object.assign({}, this.props.story, this.state);
     this.props.updateStory(story)
-    .then(() => this.props.router.push(`/users/${this.props.currentUser.id}`));
+    .then(() => this.props.router.push(`/story/${this.props.story.id}`));
   }
 
   render() {

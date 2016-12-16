@@ -65,9 +65,9 @@ class UserDetail extends React.Component {
       <main>
         <section className="user-detail-info">
           <ul className="group">
+            <li><img className="user-detail-image" src={ this.props.user.image_url }/></li>
             <li className="user-detail-info-content">
               <ul>
-                <li><img className="user-detail-image" src={ this.props.user.image_url }/></li>
                 <li id="user-detail-username">{this.props.user.username}</li>
                 <li id="user-detail-description">{this.props.user.description}</li>
                 <li>
@@ -79,7 +79,6 @@ class UserDetail extends React.Component {
                 <li>{this.followButton()}</li>
               </ul>
             </li>
-            <li className="user-detail-info-picture"></li>
           </ul>
         </section>
         <UserDetailIndexItems

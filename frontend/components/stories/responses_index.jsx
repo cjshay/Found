@@ -1,12 +1,13 @@
 import React from 'react';
 import { StoryIndexItem } from './story_index_item';
 
-const ResponsesIndexItems = ({ responses, currentUser, deleteLike, createLike }) => {
+const ResponsesIndexItems = ({ responses, currentUser, deleteLike, createLike, deleteStory }) => {
   return (
     <ul className="response-list group">
       { responses.sort().reverse().map(response => <StoryIndexItem
         key={ response.id }
         story={ response }
+        deleteStory={ deleteStory }
         currentUser= { currentUser }
         deleteLike={ deleteLike }
         createLike={ createLike }/>) }
@@ -29,6 +30,7 @@ class ResponsesIndex extends React.Component{
           <h6 className="responses-header">Responses</h6>
           <ResponsesIndexItems
             responses={ this.props.responses }
+            deleteStory={ this.props.deleteStory }
             currentUser={ this.props.currentUser }
             createLike={ this.props.createLike }
             deleteLike={ this.props.deleteLike }/>

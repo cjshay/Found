@@ -18,20 +18,33 @@
   display: block;
 }
 
+.story-item-image-div {
+  width: 639px;
+  margin: 10px;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+}
+
 .story-item-profile {
-  margin: 31px 0 0 65px;
+  margin: 0 0 0 20px;
   display: block;
+  padding-top: 25px;
 }
 .story-item-profile > li {
   float: left;
 }
-.story-item-profile > li:first-child {
+#story-item-username{
   color: #02b875;
   font-size: 16px;
+  margin: 5px 10px;
 }
+
 .story-item-date-and-length {
   margin: auto 10px;
   display: block;
+  width: 500px;
+  float: left;
 }
 .story-item-date-and-length > li:first-child::after{
   content: "\00b7";
@@ -41,7 +54,10 @@
   color: gray;
   font-size: 12px;
   float: left;
-  margin: 5px;
+  margin: 5px 5px 5px 0;
+}
+.story-item-user-image {
+  border-radius: 20px;
 }
 .story-item-title a {
   margin: 36px 20px 0 20px;

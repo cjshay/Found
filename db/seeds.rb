@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.delete_all
-Follow.delete_all
-Like.delete_all
-Story.delete_all
+User.destroy_all
+Follow.destroy_all
+Like.destroy_all
+Story.destroy_all
 
 User.create(username: "coolcat", password: "coolcat")
 User.create(username: "hitmonlee", password: "hitmonlee")
@@ -23,7 +23,7 @@ User.create(username: "catslacks", password: "catslacks")
 User.create(username: "notanotherjohnnystyles", password: "notanotherjohnnystyles")
 User.create(username: "lostmyhat", password: "lostmyhat")
 User.create(username: "windmillseagull", password: "windmillseagull")
-User.create(username: "kesha", password: "kesha")
+User.create(username: "keshaz", password: "keshaz")
 User.create(username: "dimemime", password: "dimemime")
 User.create(username: "old4lyfe", password: "old4lyfe")
 User.create(username: "studieslyfe", password: "studieslyfe")
@@ -32,7 +32,6 @@ User.create(username: "caughtfish", password: "caughtfish")
 User.create(username: "codfish", password: "codfish")
 User.create(username: "guest", password: "123456")
 
-users = User.all
 story_content = [
   "maybe that’s what art is, the working out of things,
   internal and external, that accrue at a rapid pace
@@ -1224,17 +1223,16 @@ Lasch",
   "Thanks for sharing",
   "This is really cool"
 ]
-
-users_pictures = users.dup
-21.times do |i|
-  if i < 9
-    num = "0#{i + 1}"
-  elsif i >= 9
-    num = "#{i + 1}"
+users = User.all.map{|user| user}
+users_pictures = users.dup.shuffle
+users_pictures.length.times do |i|
+  if i < 10
+    num = "0#{i}"
+  elsif i >= 10
+    num = "#{i}"
   end
-  debugger
-  users_pictures.shuffle.pop.update(
-  image_url: "/assets/user_pictures/user_#{num}.png")
+  user = users_pictures.pop
+  user.update(image_url: "/assets/user_pictures/user_#{num}.png")
 end
 4.times do
   Story.create(content: story_content.shuffle.pop, author_id: User.find_by_username("guest").id)
@@ -1243,18 +1241,17 @@ end
   Story.create(content: story_content.shuffle.pop, author_id: users.sample.id)
 end
 
-stories = Story.all
+stories = Story.all.map{|story| story}
 
-stories_pictures = stories.dup
+stories_pictures = stories.dup.shuffle
 stories_pictures.length.times do |i|
-  if i < 9
-    num = "0#{i + 1}"
-  elsif i >= 9
-    num = "0#{i + 1}"
+  if i < 10
+    num = "0#{i}"
+  elsif i >= 10
+    num = "#{i}"
   end
-  user = stories_pictures.shuffle.pop
-  debugger
-  user.update(image_url: "/assets/story_pictures/story_#{num}.png")
+  story = stories_pictures.pop
+  story.update(image_url: "/assets/story_pictures/story_#{num}.png")
 end
 
 214.times do

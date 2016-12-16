@@ -55,7 +55,7 @@ export const StoryIndexItem = (props) => {
         <li>
           <ul className= "story-item-profile group">
             <li><img className="story-item-user-image" src={ props.story.author.image_url }/></li>
-            <li><Link
+            <li id="story-item-username"><Link
               to={"/users/" + props.story.author.id}>
               { props.story.author.username }
             </Link></li>
@@ -69,6 +69,13 @@ export const StoryIndexItem = (props) => {
         </li>
         <li className="story-item-title">
           <Link to={"/story/" + props.story.id}>{props.story.title}</Link>
+        </li>
+        <li>
+          <div className="story-item-image-div">
+            <Link to={"/story/" + props.story.id}>
+              <img src={ props.story.image_url }/>
+            </Link>
+          </div>
         </li>
         <li className="story-item-content">
           <Link

@@ -10,10 +10,15 @@
   margin: 35px auto 10px;
 }
 .create-story-form p {
-  margin: 31px 0 0 65px;
+  margin: 31px 0 0 10px;
   color: #02b875;
   display: block;
   font-size: 16px;
+  float: left;
+}
+.story-form-image {
+  margin: 20px 0 0 20px;
+  float: left;
 }
 .create-story-form textarea {
   display: block;
@@ -34,13 +39,15 @@
   color: #02b875;
   background: white;
   margin-left: 20px;
-  margin-top: 40px;
+  margin-top: 0px;
   border-radius: 20px;
   display: block;
   float: left;
 }
 .create-story-form input:hover {
   cursor: pointer;
+  background: #02b875;
+  color: white;
 }
 .update-story {
   background: white;

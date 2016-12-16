@@ -51,8 +51,8 @@ class StoryDetail extends React.Component {
   followButton() {
     if (this.props.currentUser === null ||
       this.props.currentStory === undefined ||
-      this.props.currentStory !== undefined ||
       this.props.currentUser.id === this.props.currentStory.author.id) {
+      // this.props.currentStory !== undefined ||
       return (<div></div>);
     }
     const following =
@@ -81,9 +81,9 @@ class StoryDetail extends React.Component {
                 <ul className= "story-detail-profile group">
                   <li className="detail-profile-info">
                     <ul>
+                      <li><img className="story-detail-user-image" src={ this.props.story.author.image_url }/></li>
                       <li>
                         <ul className="detail-profile-username-and-follow group">
-                          <li><img className="story-detail-user-image" src={ this.props.story.author.image_url }/></li>
                           <li><Link
                             to={"/users/" + this.props.story.author.id}>
                             { this.props.story.author.username }
@@ -91,7 +91,6 @@ class StoryDetail extends React.Component {
                         <li>{this.followButton()}</li>
                         </ul>
                       </li>
-                      <li className="detail-profile-description">{description}</li>
                       <li>
                         <ul className="detail-story-date group">
                           <li>{this.props.story.length} min read</li>
@@ -103,7 +102,11 @@ class StoryDetail extends React.Component {
                   </li>
                 </ul>
               </li>
-              <li><img className="story-detail-image" src={ this.props.story.image_url }/></li>
+              <li>
+                <div className="story-detail-image-div">
+                  <img src={ this.props.story.image_url }/>
+                </div>
+              </li>
               <li className="story-detail-title">{this.props.story.title}</li>
               <li className="story-detail-content" >{this.props.story.content}</li>
               <li>

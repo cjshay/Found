@@ -35,7 +35,10 @@ class CreateStoryForm extends React.Component {
     if (this.props.currentUser !== null) {
       return (
           <form className="create-story-form" onSubmit={this.handleSubmit}>
-            <p><Link to={"/users/" + this.props.currentUser.id}>{this.props.currentUser.username}</Link></p>
+            <div className="group">
+              <Link to={"/users/" + this.props.currentUser.id}><img className="story-form-image" src={ this.props.currentUser.image_url }/></Link>
+              <p><Link to={"/users/" + this.props.currentUser.id}>{this.props.currentUser.username}</Link></p>
+            </div>
             <textarea
               value={this.state.content}
               placeholder="Write Here..."
