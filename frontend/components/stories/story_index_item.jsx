@@ -32,8 +32,8 @@ export const StoryIndexItem = (props) => {
       return (
         <ul className="update-delete group">
           <li>
-            <button className="update-button">
-              <Link to={"/story/" + props.story.id + "/edit"}>Edit</Link></button>
+            <Link to={"/story/" + props.story.id + "/edit"}><button className="update-button">
+              Edit</button></Link>
           </li>
           <li>
             <button className="delete-button" onClick={deleteStory}>Delete</button>
