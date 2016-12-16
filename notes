@@ -71,5 +71,14 @@ s3_secret_access_key: "H8yex9qsH+GVn9Jhsdp7EzwoReccgo/N67v8R5Pq"
 
 TODO:
 -
+def self.up
+  change_table :stories do |t|
+    t.attachment :image
+  end
+end
+
+def self.down
+  remove_attachment :stories, :image
+end
 -
 -
