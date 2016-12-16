@@ -16,8 +16,7 @@ export const fetchStories = (storyId) => {
       (stories) => {
 
         return dispatch(receiveStories(stories));
-      },
-      (errors) => console.log(errors)
+      }
     );
   };
 };
@@ -25,8 +24,7 @@ export const fetchStories = (storyId) => {
 export const fetchUserStories = () => {
   return (dispatch) => {
     return APIUtil.fetchStories().then(
-      stories => dispatch(receiveStories),
-      errors => console.log(errors)
+      stories => dispatch(receiveStories)
     );
   };
 };
@@ -85,8 +83,7 @@ export const createLike = (story) => {
     // const likedStories = {};
     // likedStories[likedStory.id] = likedStory;
     return APIUtil.createLike(story.id).then(
-      (likedStory) => dispatch(receiveStory(likedStory)),
-      () => console.log("error")
+      (likedStory) => dispatch(receiveStory(likedStory))
     );
   };
 };
@@ -100,8 +97,7 @@ export const deleteLike = (story) => {
     // const likedStories = {};
     // likedStories[likedStory.id] = likedStory;
     return APIUtil.deleteLike(story.id).then(
-      (unlikedStory) => dispatch(receiveStory(unlikedStory)),
-      () => console.log("error")
+      (unlikedStory) => dispatch(receiveStory(unlikedStory))
     );
   };
 };

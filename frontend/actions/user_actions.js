@@ -7,8 +7,7 @@ export const RECEIVE_USER = "RECEIVE_USER";
 export const createFollow = (followeeId) => {
   return (dispatch) => {
     return APIUtil.createFollow(followeeId).then(
-      user => dispatch(receiveUser(user)),
-      errors => console.log(errors)
+      user => dispatch(receiveUser(user))
     );
   };
 };
@@ -16,8 +15,7 @@ export const createFollow = (followeeId) => {
 export const deleteFollow = (followeeId) => {
   return (dispatch) => {
     return APIUtil.deleteFollow(followeeId).then(
-      user => dispatch(receiveUser(user)),
-      errors => console.log(errors)
+      user => dispatch(receiveUser(user))
     );
   };
 };
@@ -25,8 +23,7 @@ export const deleteFollow = (followeeId) => {
 export const fetchUser = (userId) => {
   return (dispatch) => {
     return APIUtil.fetchUser(userId).then(
-      user => dispatch(receiveUser(user)),
-      errors => console.log(errors)
+      user => dispatch(receiveUser(user))
     );
   };
 };
