@@ -1232,7 +1232,7 @@ users_pictures.length.times do |i|
     num = "#{i}"
   end
   user = users_pictures.pop
-  user.update(image_url: "/assets/user_pictures/user_#{num}.png")
+  user.update(image_url: "user_#{num}.png")
 end
 4.times do
   Story.create(content: story_content.shuffle.pop, author_id: User.find_by_username("guest").id)
@@ -1251,7 +1251,7 @@ stories_pictures = stories.dup.shuffle
     num = "#{i}"
   end
   story = stories_pictures.pop
-  story.update(image_url: "/assets/story_pictures/story_#{num}.png")
+  story.update(image_url: "story_#{num}.png")
 end
 
 214.times do
