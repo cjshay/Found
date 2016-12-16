@@ -64,15 +64,11 @@ export const Greeting = (props) => {
             <Link to='/signup' id="signup">Signup</Link>
             <p id="slash">/</p>
             <Link to='/signin' id="signin">Signin</Link>
-            <a href="#"><img src={window.images.search}/></a>
           </nav>
         </header>
 
         <nav className="story-nav group">
-          <a href="#">For You</a>
-          <a href="#">Editor's Picks</a>
-          <a href="#">Humor</a>
-          <a href="#">Top stories</a>
+          <a href="#">Your Feed</a>
         </nav>
 
 
