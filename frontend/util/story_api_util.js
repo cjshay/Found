@@ -21,12 +21,13 @@ export const fetchStory = (storyId) => {
   });
 };
 
-export const createStory = (story) => {
-  story.parent_id = story.parentId;
+export const createStory = (formData) => {
   return $.ajax ({
     method: 'POST',
     url: `/api/stories`,
-    data: {story: story}
+    data: formData,
+    contentType: false,
+    processData: false
   });
 };
 

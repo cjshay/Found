@@ -1,5 +1,6 @@
 export const RECEIVE_STORIES = "RECEIVE_STORIES";
 export const RECEIVE_STORY = "RECEIVE_STORY";
+export const REMOVE_STORY = "REMOVE_STORY";
 // export const RECEIVE_RESPONSES = "RECEIVE_RESPONSES";
 export const RECEIVE_STORY_ERRORS = "RECEIVE_STORY_ERRORS";
 
@@ -51,10 +52,26 @@ export const fetchStory = (storyId) => {
 };
 
 
-export const createStory = (story) => {
+export const createStory = (formData) => {
   return (dispatch) => {
-    return APIUtil.createStory(story).then(
+    return APIUtil.createStory(formData).then(
       (createdStory) => dispatch(receiveStory(createdStory)),
+      (errors) => dispatch(receiveStoryErrors(errors.responseJSON))
+    );
+  };
+};
+export const updateStory = (story) => {
+  return (dispatch) => {
+    return APIUtil.updateStory(story).then(
+      (updatedStory) => dispatch(receiveStory(updatedStory)),
+      (errors) => dispatch(receiveStoryErrors(errors.responseJSON))
+    );
+  };
+};
+export const deleteStory = (story) => {
+  return (dispatch) => {
+    return APIUtil.deleteStory(story).then(
+      () => dispatch(removeStory(story.id)),
       (errors) => dispatch(receiveStoryErrors(errors.responseJSON))
     );
   };
@@ -73,6 +90,8 @@ export const createLike = (story) => {
     );
   };
 };
+
+
 
 export const deleteLike = (story) => {
   return (dispatch) => {
@@ -101,6 +120,13 @@ export const receiveStory = (stories) => {
   return {
     type: RECEIVE_STORY,
     stories
+  };
+};
+
+export const removeStory = (storyId) => {
+  return {
+    type: REMOVE_STORY,
+    storyId
   };
 };
 

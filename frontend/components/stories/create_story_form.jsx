@@ -16,11 +16,15 @@ class CreateStoryForm extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault();
-    const story = Object.assign({}, this.state);
+    let formData = new FormData();
+    formData.append("story[title]", this.state.title);
+    formData.append("story[content]", this.state.content);
+    formData.append("story[image]", this.state.imageFile);
     if (this.props.parentId !== undefined) {
-      story.parentId = this.props.parentId;
+      formData.append("story[parentId]", this.props.parentId);
+      formData.append("story[parent_id]", this.props.parentId);
     }
-    this.props.createStory(story);
+    this.props.createStory(formData);
     this.setState({title: '', content: '', imageFile: "", imageUrl: ""});
 
   }
@@ -41,21 +45,21 @@ class CreateStoryForm extends React.Component {
 
   render () {
     if (this.props.currentUser !== null) {
+      let previewToggle = "img-preview";
+      if ( this.state.imageUrl !== "" ) {
+        previewToggle = "img-preview";
+      }
       return (
         <form className="create-story-form" onSubmit={this.handleSubmit}>
-          <span>
-            <div>
-              <input
+          <section className="image-container">
+            <div className="image-area">
+              <input className="image-file-input"
                 type="file"
                 onChange={ this.updateFile }>
               </input>
-              <img src={ this.state.imageUrl }/>
-              <div>
-                <li>0</li>
-                <li>Add Image</li>
-              </div>
+              <img className={previewToggle} src={ this.state.imageUrl }/>
             </div>
-          </span>
+          </section>
           <p>{this.props.currentUser.username}</p>
           <textarea
             value={this.state.content}

@@ -1,6 +1,7 @@
 import {
   RECEIVE_STORIES,
   RECEIVE_STORY,
+  REMOVE_STORY,
   RECEIVE_RESPONSES,
   RECEIVE_STORY_ERRORS}
   from '../actions/story_actions';
@@ -42,6 +43,11 @@ const storyReducer = (state = {}, action) => {
       const errors = {errors: action.errors};
       newState = merge({}, state, errors);
       return newState;
+    case REMOVE_STORY:
+      const newStories = Object.assign({}, state);
+      debugger
+      delete state[action.storyId];
+
     case RECEIVE_USER:
       if (state.currentStory !== undefined && state.currentStory.author !== undefined) {
         const currentStory = state.currentStory;

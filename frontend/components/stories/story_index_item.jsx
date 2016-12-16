@@ -23,6 +23,27 @@ export const StoryIndexItem = (props) => {
     }
 
   };
+  const deleteStory = () => {
+    props.deleteStory(props.story);
+  };
+  const editStoryForm = () => {
+    
+  };
+  const deleteAndEdit = () => {
+    if (props.currentUser !== null && props.currentUser.id === props.story.author.id) {
+      return (
+        <ul>
+          <li>
+            <button onClick={editStoryForm}>Edit</button>
+          </li>
+          <li>
+            <button onClick={deleteStory}>Delete</button>
+          </li>
+        </ul>
+      );
+    }
+    return (<ul></ul>);
+  };
   let content;
   if (props.story.content.length < 120) {
     content = props.story.content;
@@ -64,6 +85,7 @@ export const StoryIndexItem = (props) => {
           <li>{props.story.likes}</li>
         </ul>
       </ul>
+      {deleteAndEdit}
     </li>
   );
 };
