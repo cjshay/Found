@@ -1,7 +1,8 @@
 follower_ids = user.followers.map{|follower| follower.id}
 followee_ids = user.followees.map{|followee| followee.id}
 
-json.extract! user, :username, :id, :image_url
+json.extract! user, :username, :id
+json.image_url asset_path(user.image_url)
 json.set! :follows do
   json.set! :follower_ids, follower_ids
   json.set! :follower_count, follower_ids.length

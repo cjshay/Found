@@ -1251,7 +1251,7 @@ stories_pictures = stories.dup.shuffle
     num = "#{i}"
   end
   story = stories_pictures.pop
-  story.update(image_url: "/assets/images/story_pictures/story_#{num}.png")
+  story.update(image_url: "/assets/story_pictures/story_#{num}.png")
 end
 
 214.times do
