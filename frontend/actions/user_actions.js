@@ -28,6 +28,14 @@ export const fetchUser = (userId) => {
   };
 };
 
+export const updateUser = (user) => {
+  return (dispatch) => {
+    return APIUtil.updateUser(user).then(
+      (updatedUser) => dispatch(receiveUser(updatedUser))
+    );
+  };
+};
+
 export const receiveUsers = (users) => {
   return {
     type: RECEIVE_USERS,

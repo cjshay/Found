@@ -18,3 +18,11 @@ export const deleteFollow = (followeeId) => {
     url: `api/users/${followeeId}/follows/_`
   });
 };
+
+export const updateUser = (user) => {
+  return $.ajax({
+    method: "PATCH",
+    url: `api/users/${user.id}`,
+    data: {user: user}
+  });
+};

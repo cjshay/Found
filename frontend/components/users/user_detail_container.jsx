@@ -6,14 +6,20 @@ import { selectUserStories } from '../../reducers/selectors';
 import { createLike, deleteLike } from '../../actions/story_actions';
 
 
-const mapStateToProps = ({ users, stories, session }, ownProps) => {
+const mapStateToProps = (state, ownProps) => {
   const userId = ownProps.params.user_id;
+  let username;
+  if (state.users.userDetail){
+    username = state.users.userDetail.username;
+  }
 
   return {
-    user: users[userId],
+    users: state.users,
+    user: state.users.userDetail,
+    username: username,
     userId: userId,
-    stories: selectUserStories(stories, userId),
-    currentUser: session.currentUser
+    stories: selectUserStories(state.stories, userId),
+    currentUser: state.session.currentUser
   };
 };
 

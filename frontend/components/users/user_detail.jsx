@@ -22,9 +22,16 @@ const UserDetailIndexItems = ({ stories, currentUser, deleteLike, createLike, de
 class UserDetail extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = {edit: false};
     this.toggleFollow = this.toggleFollow.bind(this);
     this.followButton = this.followButton.bind(this);
+    this.userIsEditing = this.userIsEditing.bind(this);
+    this.toggleEditUser = this.toggleEditUser.bind(this);
+  }
+  componentWillReceiveProps(nextProps) {
+    if (this.props.user === undefined || nextProps.user === undefined || this.props.user.username !== nextProps.user.username) {
+      this.setState({edit: false});
+    }
   }
   componentDidMount() {
     this.props.fetchUserStories();
@@ -57,36 +64,37 @@ class UserDetail extends React.Component {
     return (<button className="follow" onClick={this.toggleFollow}>Follow</button>);
   }
   userIsEditing() {
-    const userIsEditing = true;
-    this.toggleEditUser(userIsEditing);
+    this.setState({edit: true});
   }
 
   toggleEditUser(userIsEditing) {
-    if (userIsEditing === true) {
-      return <EditUser
+    debugger
+    if (this.state.edit) {
+      return (<EditUser
         user={this.props.user}
-        updateUser={this.props.updateUser}/>;
+        updateUser={this.props.updateUser}/>);
     }
-    return (<section className="user-detail-info">
-      <ul className="group">
-        <li><img className="user-detail-image" src={ this.props.user.image_url }/></li>
-        <li className="user-detail-info-content">
-          <ul>
-            <li id="user-detail-username">{this.props.user.username}</li>
-            <li id="user-detail-description">{this.props.user.description}</li>
-            <li>
-              <ul className="user-detail-follows group">
-                <li>{this.props.user.follows.follower_count} Followers</li>
-                <li>{this.props.user.follows.followee_count} Following </li>
-              </ul>
-            </li>
-            <li>{this.followButton()}</li>
-            <li>{<button onClick={this.userIsEditing}>Edit Profile</button>}</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-  );
+    return (
+      <section className="user-detail-info">
+        <ul className="group">
+          <li><img className="user-detail-image" src={ this.props.user.image_url }/></li>
+          <li className="user-detail-info-content">
+            <ul>
+              <li id="user-detail-username">{this.props.username}</li>
+              <li id="user-detail-description">{this.props.user.description}</li>
+              <li>
+                <ul className="user-detail-follows group">
+                  <li>{this.props.user.follows.follower_count} Followers</li>
+                  <li>{this.props.user.follows.followee_count} Following </li>
+                </ul>
+              </li>
+              <li>{this.followButton()}</li>
+              <li>{<button onClick={this.userIsEditing}>Edit Profile</button>}</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    );
   }
   render () {
     if (this.props.user === undefined) {
@@ -95,13 +103,14 @@ class UserDetail extends React.Component {
 
     return (
       <main>
-        {this.toggleEditUser}
+        {this.toggleEditUser()}
         <UserDetailIndexItems
           stories={this.props.stories}
           deleteStory={this.props.deleteStory}
           currentUser= { this.props.currentUser }
           deleteLike={ this.props.deleteLike }
           createLike={ this.props.createLike }/>
+
       </main>
     );
   }
