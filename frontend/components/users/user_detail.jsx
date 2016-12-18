@@ -1,6 +1,7 @@
 import React from 'react';
 import { StoryIndexItem } from '../stories/story_index_item';
 import StoryIndexContainer from '../stories/stories_index_container';
+import EditUser from './edit_user';
 
 const UserDetailIndexItems = ({ stories, currentUser, deleteLike, createLike, deleteStory }) => {
 
@@ -55,7 +56,38 @@ class UserDetail extends React.Component {
     }
     return (<button className="follow" onClick={this.toggleFollow}>Follow</button>);
   }
+  userIsEditing() {
+    const userIsEditing = true;
+    this.toggleEditUser(userIsEditing);
+  }
 
+  toggleEditUser(userIsEditing) {
+    if (userIsEditing === true) {
+      return <EditUser
+        user={this.props.user}
+        updateUser={this.props.updateUser}/>;
+    }
+    return (<section className="user-detail-info">
+      <ul className="group">
+        <li><img className="user-detail-image" src={ this.props.user.image_url }/></li>
+        <li className="user-detail-info-content">
+          <ul>
+            <li id="user-detail-username">{this.props.user.username}</li>
+            <li id="user-detail-description">{this.props.user.description}</li>
+            <li>
+              <ul className="user-detail-follows group">
+                <li>{this.props.user.follows.follower_count} Followers</li>
+                <li>{this.props.user.follows.followee_count} Following </li>
+              </ul>
+            </li>
+            <li>{this.followButton()}</li>
+            <li>{<button onClick={this.userIsEditing}>Edit Profile</button>}</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  );
+  }
   render () {
     if (this.props.user === undefined) {
       return (<div></div>);
@@ -63,24 +95,7 @@ class UserDetail extends React.Component {
 
     return (
       <main>
-        <section className="user-detail-info">
-          <ul className="group">
-            <li><img className="user-detail-image" src={ this.props.user.image_url }/></li>
-            <li className="user-detail-info-content">
-              <ul>
-                <li id="user-detail-username">{this.props.user.username}</li>
-                <li id="user-detail-description">{this.props.user.description}</li>
-                <li>
-                  <ul className="user-detail-follows group">
-                    <li>{this.props.user.follows.follower_count} Followers</li>
-                    <li>{this.props.user.follows.followee_count} Following </li>
-                  </ul>
-                </li>
-                <li>{this.followButton()}</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
+        {this.toggleEditUser}
         <UserDetailIndexItems
           stories={this.props.stories}
           deleteStory={this.props.deleteStory}

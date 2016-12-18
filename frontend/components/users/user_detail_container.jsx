@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import UserDetail from './user_detail';
-import { createFollow, deleteFollow, fetchUser  } from '../../actions/user_actions';
+import { createFollow, deleteFollow, fetchUser, updateUser  } from '../../actions/user_actions';
 import { fetchStories, deleteStory } from '../../actions/story_actions';
 import { selectUserStories } from '../../reducers/selectors';
 import { createLike, deleteLike } from '../../actions/story_actions';
@@ -25,7 +25,8 @@ const mapDispatchToProps = (dispatch) => {
     fetchUser: (userId) => dispatch(fetchUser(userId)),
     createLike: (story) => dispatch(createLike(story)),
     deleteLike: (story) => dispatch(deleteLike(story)),
-    deleteStory: (story) => dispatch(deleteStory(story))
+    deleteStory: (story) => dispatch(deleteStory(story)),
+    updateUser: (user) => dispatch(updateUser(user))
   };
 };
 
