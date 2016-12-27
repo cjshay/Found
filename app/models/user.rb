@@ -13,7 +13,7 @@
 class User < ApplicationRecord
   attr_reader :password
 
-
+# begin password change user feature
 
   has_attached_file :image, default_url: "user_00.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
