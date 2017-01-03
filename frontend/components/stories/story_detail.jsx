@@ -73,6 +73,7 @@ class StoryDetail extends React.Component {
       description = this.props.currentUser.description;
     }
     if (this.props.story !== undefined) {
+      if (this.props.story.author === undefined) debugger;
       return (
         <main>
           <section className="story-detail-section">
