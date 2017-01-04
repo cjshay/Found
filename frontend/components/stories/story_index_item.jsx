@@ -49,7 +49,6 @@ export const StoryIndexItem = (props) => {
   } else {
     content = props.story.content.slice(0, 120) + "...";
   }
-  if (props.story.author === undefined) debugger;
   return (
     <li className="story-item group">
       <ul>
