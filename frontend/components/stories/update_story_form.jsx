@@ -22,7 +22,12 @@ class UpdateStory extends React.Component {
   handleSubmit() {
     const story = Object.assign({}, this.props.story, this.state);
     this.props.updateStory(story)
-    .then(() => this.props.router.push(`/story/${this.props.story.id}`));
+    .then(() => {
+      if (this.props.story.parent_id) {
+        return this.props.router.push(`/story/${this.props.story.parent_id}`);
+      }
+      return this.props.router.push(`/story/${this.props.story.id}`);
+    });
   }
 
   render() {

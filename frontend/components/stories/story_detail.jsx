@@ -49,7 +49,6 @@ class StoryDetail extends React.Component {
   }
 
   followButton() {
-    debugger
     if (this.props.currentUser === null ||
       this.props.currentStory === undefined ||
       this.props.currentStory.author === undefined ||
@@ -84,7 +83,9 @@ class StoryDetail extends React.Component {
                 <ul className= "story-detail-profile group">
                   <li className="detail-profile-info">
                     <ul>
-                      <li><img className="story-detail-user-image" src={ this.props.story.author.image_url }/></li>
+                      <li><Link to={"/users/" + this.props.story.author.id}>
+                        <img className="story-detail-user-image" src={ this.props.story.author.image_url }/>
+                      </Link></li>
                       <li>
                         <ul className="detail-profile-username-and-follow group">
                           <li><Link
