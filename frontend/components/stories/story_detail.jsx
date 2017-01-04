@@ -49,10 +49,12 @@ class StoryDetail extends React.Component {
   }
 
   followButton() {
+    debugger
     if (this.props.currentUser === null ||
       this.props.currentStory === undefined ||
       this.props.currentStory.author === undefined ||
-      this.props.currentUser.id === this.props.currentStory.author.id) {
+      this.props.currentUser.id === this.props.currentStory.author.id ||
+      (this.props.story !== undefined && this.props.story.author.username === this.props.currentUser.username) ){
       return (<div></div>);
     }
     const following =
