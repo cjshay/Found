@@ -27,7 +27,6 @@ class Api::UsersController < ApplicationController
     if @user.update(user_params)
       render :show
     else
-      debugger
       render json: @user.errors.full_messages, status: 422
     end
   end

@@ -3,7 +3,6 @@ import { StoryIndexItem } from '../stories/story_index_item';
 import StoryIndexContainer from '../stories/stories_index_container';
 
 const UserDetailIndexItems = ({ stories, currentUser, deleteLike, createLike, deleteStory }) => {
-
   return (
     <ul className="">
       { stories.reverse().map(
@@ -25,6 +24,7 @@ class UserDetail extends React.Component {
     this.toggleFollow = this.toggleFollow.bind(this);
     this.followButton = this.followButton.bind(this);
   }
+
   componentDidMount() {
     this.props.fetchUserStories();
     this.props.fetchUser(this.props.userId);
@@ -58,6 +58,8 @@ class UserDetail extends React.Component {
 
   render () {
     if (this.props.user === undefined) {
+      this.props.fetchUserStories();
+      this.props.fetchUser(this.props.userId);
       return (<div></div>);
     }
 

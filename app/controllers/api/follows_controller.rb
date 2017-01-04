@@ -5,8 +5,9 @@ class Api::FollowsController < ApplicationController
     followee_id: params[:user_id],
     follower_id: current_user.id)
     if @follow.save
-      @user = @follow.followee
-      render "api/users/show"
+      # @user = @follow.followee
+      @users = User.where(id: @follow.followee_id) + User.where(id: @follow.follower_id)
+      render "api/users/index"
     else
       render json: @follow.errors.full_messages, status: 422
     end
@@ -18,8 +19,10 @@ class Api::FollowsController < ApplicationController
     follower_id: current_user.id,
     followee_id: params[:user_id])
     followee_id = @follow.followee_id
+    follower_id = @follow.follower_id
     @follow.destroy
-    @user = User.find(followee_id)
-    render "api/users/show"
+    @users = User.where(id: followee_id) + User.where(id: follower_id)
+    # @user = User.find(followee_id)
+    render "api/users/index"
   end
 end

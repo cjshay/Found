@@ -1,4 +1,14 @@
 
+Bugs
+- Sometimes the story doesn't have an author and it breaks the app?
+- Go to guest profile from certain places and nothing gets loaded except for top bar?
+  - componentDidMount does not trigger??
+  - from another user profile
+  - solution- fetch user and stories in render
+- When I unfollow and go back to feed, the stories of that person are still there
+  - vice versa for following
+  - solution: fixed by receiving current user after follows.
+
 Notes
 - try to see if I can render the info I want without using jbuilder (seems verbose?)
 - make tests so that when I change something, I know nothing is breaking
@@ -54,4 +64,3 @@ less important
   - write a story links to show page
 - pretty text editor and rendering
 - make sure that nested comments render correctly
-

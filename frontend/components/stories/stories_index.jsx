@@ -14,7 +14,16 @@ const StoryIndexItems = ({ stories, createLike, deleteLike, currentUser, deleteS
   </ul>
   );
 };
-
+// 30
+// 1
+// :
+// 25
+// 2
+// :
+// 32
+// 3
+// :
+// 38
 class StoriesIndex extends React.Component{
   componentDidMount() {
     this.props.fetchStories();
