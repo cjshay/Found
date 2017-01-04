@@ -9,8 +9,6 @@ end
 
 json.set! :author do
   json.partial! 'api/users/user', user: story.author
-  # json.set! :username, story.author.username
-  # json.set! :id, story.author.id
 end
 json.set! :length, length
 json.set! :date do
