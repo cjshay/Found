@@ -6,7 +6,7 @@ import React from 'react';
 export const Home = (props) => {
   return(
     <main className="main-content group">
-      <CreateStoryFormContainer />
+      <CreateStoryFormContainer router={props.router}/>
       <StoriesIndexContainer />
 
     </main>

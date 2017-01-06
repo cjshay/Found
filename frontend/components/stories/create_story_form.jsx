@@ -25,7 +25,10 @@ class CreateStoryForm extends React.Component {
       formData.append("story[parentId]", this.props.parentId);
       formData.append("story[parent_id]", this.props.parentId);
     }
-    this.props.createStory(formData);
+    this.props.createStory(formData).then(_ => {
+      if (!_.stories[Object.keys(_.stories)[0]].parent_id)
+        this.props.router.push(`/users/${window.currentUser.id}`);
+    });
     this.setState({title: '', content: '', imageFile: "", imageUrl: ""});
 
   }
