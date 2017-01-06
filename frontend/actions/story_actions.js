@@ -34,8 +34,7 @@ export const fetchResponses = (parentId) => {
     return APIUtil.fetchResponses(parentId).then(
       (responses) => {
         return dispatch(receiveStories(responses));
-      },
-      (errors) => console.log(errors)
+      }
     );
   };
 };
