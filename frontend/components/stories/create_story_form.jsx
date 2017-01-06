@@ -27,7 +27,7 @@ class CreateStoryForm extends React.Component {
     }
     this.props.createStory(formData).then(_ => {
       if (!_.stories[Object.keys(_.stories)[0]].parent_id)
-        this.props.router.push(`/users/${window.currentUser.id}`);
+        this.props.router.push(`/users/${this.props.currentUser.id}`);
     });
     this.setState({title: '', content: '', imageFile: "", imageUrl: ""});
 
