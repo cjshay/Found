@@ -25,7 +25,8 @@ the api/stories namespace. Story show pages are fetched similarly passing
 the story id as a param. If a story is edited or updated, the page automatically
 updates because the props are listening to that slice of state.
 
-![story screenshot](https://github.com/cjshay/found/blob/master/docs/wireframes/story-show-page.png)
+![story screenshot](https://github.com/cjshay/found/blob/master/docs/screenshots/01.jpg)
+![profile screenshot](https://github.com/cjshay/found/blob/master/docs/screenshots/02.jpg)
 
 
 ### Responses
