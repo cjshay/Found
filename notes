@@ -8,6 +8,8 @@ Bugs
 - When I unfollow and go back to feed, the stories of that person are still there
   - vice versa for following
   - solution: fixed by receiving current user after follows.
+- sometimes the follows button doesn't show up when It should? Giant if or statement???
+- if I go back and forth between a user and a story page, sometimes the story does not have an author?
 
 Notes
 - try to see if I can render the info I want without using jbuilder (seems verbose?)

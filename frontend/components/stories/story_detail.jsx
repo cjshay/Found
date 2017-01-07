@@ -13,7 +13,6 @@ class StoryDetail extends React.Component {
     this.toggleHeart = this.toggleHeart.bind(this);
   }
   componentDidMount() {
-
     this.props.fetchStory(this.props.storyId);
   }
   toggleHeart () {
@@ -73,7 +72,7 @@ class StoryDetail extends React.Component {
     } else {
       description = this.props.currentUser.description;
     }
-    if (this.props.story !== undefined) {
+    if (this.props.story !== undefined && this.props.story.author !== undefined) {
       return (
         <main>
           <section className="story-detail-section">

@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   const storyId = ownProps.params.story_id;
   const story = state.stories[storyId];
   let userId = 'id';
-  if (story !== undefined) {
+  if (story !== undefined && story.author !== undefined) {
     userId = story.author.id;
   }
   return {
