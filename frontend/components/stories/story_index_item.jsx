@@ -66,7 +66,7 @@ export const StoryIndexItem = (props) => {
             <li>
               <ul className="story-item-date-and-length group">
                 <li>{props.story.length} min read</li>
-                <li>Dec { props.story.date.day }</li>
+                <li>Jan { props.story.date.day }</li>
               </ul>
             </li>
           </ul>
