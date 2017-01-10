@@ -18,6 +18,3 @@ end
 json.set! :likes, story.likes.length
 json.set! :likers, likers
 json.set! :response_ids, response_ids
-
-
-# TODO: Change state shape so that there is just an author id

@@ -8,6 +8,7 @@
   margin: 0 auto;
   width: 900px;
 }
+
 .story-detail-profile {
   margin-bottom: 20px;
 }
@@ -21,9 +22,9 @@
   margin: 60px 0 0 20px;
   border-radius: 20px;
 }
+
 .detail-profile-username-and-follow li:first-child{
   float: left;
-  // margin-right: 50px;
   margin: 35px 0 0 65px;
   display: block;
 }
@@ -35,41 +36,44 @@
   border-radius: 18px;
   font-size: 14px;
 }
+
 .detail-profile-username-and-follow button:hover {
   cursor: pointer;
 }
+
 .detail-profile-username-and-follow li {
   float: left;
 }
+
 .detail-profile-username-and-follow a {
   font-size: 16px;
-  // vertical-align: middle;
 }
+
 .detail-profile-description {
   color: gray;
   font-size: 16px;
 }
+
 .detail-story-date {
   margin-left: 155px;
 }
+
 .detail-story-date > li:first-child::after{
   content: "\00b7";
   margin-left: 10px;
 }
+
 .detail-story-date li{
   color: gray;
   font-size: 12px;
   float: left;
   margin: 5px;
-
 }
+
 .detail-story-date li:first-child {
   float: left;
 }
 
-.story-detail > li {
-  // text-align: center;
-}
 .story-detail-title {
   display: block;
   font-size: 24px;
@@ -84,6 +88,7 @@
 .detail-story-likes {
   margin: 20px;
 }
+
 .detail-story-likes img:hover {
   cursor: pointer;
 }
@@ -100,6 +105,7 @@
   line-height: 33px;
   padding: 40px 20px;
 }
+
 .response-section {
   margin: 0 auto;
   width: 640px;
@@ -117,15 +123,3 @@
 .response-section form,  .response-list-section {
   float: left;
 }
-
-// .response-list {
-//   width: 640px;
-// }
-// .response-list > li {
-//   display: block;
-//   float: left;
-// }
-//
-// .create-story-form {
-//   display: block;
-// }
