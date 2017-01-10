@@ -8,22 +8,23 @@ the front-end and a ruby-on-rails back-end.
 ## Features & Implementation
 
 ### User creation/auth
-Users can sign up for found in order to discover meaningful articles and
-make useful discourse about their passions. On the back-end, users are created
-with a username, where an api namespace creates a session for them automatically
-(logs them in). The auth is created using the bcrypt gem to create a hashed password_digest
-and a hashed session token to keep track of the logged in user.
+The PostgreSQL database has a users table that is authenticated using BCrypt. Bcrypt 
+doesn't store user's password in the database. Instead, it stores a unique 
+value called a "SALT" hashed alongside the hashed password (several times). 
+This guards against rainbow tables and essentially all brute force password hacking.
+Users sessions are created using a sessions controller that assigns a current user 
+to the window for frontend access on log in.
 
 ### Stories
-Stories are the main feature of Found. Each user can read other users' stories.
-Users can update and delete stories that they've posted. Stories use
-large pristine photos to demonstrate their content. On the back end,
-the database stores the content, image and author id of the post under an
-api namespace. On the front end, react updates stories on the spot using a
-router. Story index pages are fetched using ajax functions that make calls to
-the api/stories namespace. Story show pages are fetched similarly passing
-the story id as a param. If a story is edited or updated, the page automatically
-updates because the props are listening to that slice of state.
+Stories are created and stored using one database table. React containers access 
+selector functions that filter stories located in state and subsequently loops 
+through and displays all at once with a stories index item component. The front end
+communicates with the backend using ajax calls in modular util files, giving the website
+a fast, slick feel that only pings the database when necessary. Story actions are called and 
+a thunk mechanism triggers ajax calls, passing them the relavent information. After each ajax 
+call, the changed information comes back and is passed into the reducer. When this new information
+serves up a new state, the component knows to re-render (This is a brief description of the
+redux cycle, a unidirection way to structure application and logic flow).
 
 ![story screenshot](https://github.com/cjshay/found/blob/master/docs/screenshots/story.jpg)
 ![profile screenshot](https://github.com/cjshay/found/blob/master/docs/screenshots/profile.jpg)
@@ -33,7 +34,8 @@ updates because the props are listening to that slice of state.
 Responses are the "comments" of found. Responses are made using the same table
 as stories. Because of this, responses can be responded to infinitely. Responses
 are able to create this behavior because the story table contains a :parent_id
-value, which corresponds to the story that it is referencing.
+value, which corresponds to the story that it is referencing. Responses are filtered 
+out of story feeds through selector functions mentioned above.
 
 
 
