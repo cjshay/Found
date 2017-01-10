@@ -11,6 +11,7 @@ class StoryDetail extends React.Component {
     this.toggleFollow = this.toggleFollow.bind(this);
     this.followButton = this.followButton.bind(this);
     this.toggleHeart = this.toggleHeart.bind(this);
+    this.likes = this.likes.bind(this);
   }
   componentDidMount() {
     this.props.fetchStory(this.props.storyId);
@@ -64,6 +65,12 @@ class StoryDetail extends React.Component {
     return (<button className="follow" onClick={this.toggleFollow}>Follow</button>);
   }
 
+  likes() {
+    if (this.props.story.likes > 0) {
+      return this.props.story.likes;
+    }
+    return "";
+  }
 
   render() {
     let description;
@@ -114,7 +121,7 @@ class StoryDetail extends React.Component {
               <li>
                 <ul className="detail-story-likes group">
                   {this.toggleHeart()}
-                  <li>{this.props.story.likes}</li>
+                  <li>{this.likes()}</li>
                 </ul>
               </li>
             </ul>

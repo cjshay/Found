@@ -23,6 +23,14 @@ export const StoryIndexItem = (props) => {
     }
 
   };
+
+  const likes = () => {
+    if (props.story.likes > 0) {
+      return props.story.likes;
+    }
+    return "";
+  };
+
   const deleteStory = () => {
     props.deleteStory(props.story.id);
   };
@@ -93,7 +101,7 @@ export const StoryIndexItem = (props) => {
         </li>
         <ul className="story-likes group">
           {toggleHeart()}
-          <li>{props.story.likes}</li>
+          <li>{likes()}</li>
         </ul>
         {deleteAndUpdate()}
       </ul>

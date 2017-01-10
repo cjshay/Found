@@ -37,6 +37,11 @@
 .logged-in a:first-child{
   color: #02b875;
 }
+
+.logged-in a:hover {
+  color: gray;
+}
+
 .not-logged-in a:hover {
   color: gray;
 }
@@ -61,6 +66,9 @@
 }
 #signup {
   content: "/"
+}
+#signup:hover, #signin:hover {
+  color: gray;
 }
 #slash {
   color: #02b875;

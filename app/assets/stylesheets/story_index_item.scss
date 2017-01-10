@@ -30,6 +30,11 @@
   display: block;
   padding-top: 25px;
 }
+
+.story-item-profile a:hover {
+  color: gray;
+}
+
 .story-item-profile > li {
   float: left;
 }
