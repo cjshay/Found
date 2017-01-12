@@ -26,8 +26,8 @@ class UserDetail extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.fetchUserStories();
-    // this.props.fetchUser(this.props.userId);
+    this.props.fetchUserStories();
+    this.props.fetchUser(this.props.userId);
   }
 
   toggleFollow() {
