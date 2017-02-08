@@ -7,12 +7,13 @@ import { fetchStories } from './util/story_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  let store;
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };
-    window.store = configureStore(preloadedState);
+    store = configureStore(preloadedState);
   } else {
-    window.store = configureStore();
+    store = configureStore();
   }
   const root = document.getElementById('root');
-  ReactDOM.render(<Root store={ window.store }/>, root);
+  ReactDOM.render(<Root store={ store }/>, root);
 });
