@@ -103,7 +103,7 @@ class StoryDetail extends React.Component {
                       <li>
                         <ul className="detail-story-date group">
                           <li>{this.props.story.length} min read</li>
-                          <li>Jan {this.props.story.date.day}</li>
+                          <li>Feb {this.props.story.date.day}</li>
                         </ul>
                       </li>
 
