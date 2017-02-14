@@ -55,9 +55,9 @@ export const createStory = (formData) => {
     );
   };
 };
-export const updateStory = (story) => {
+export const updateStory = (formData, storyId) => {
   return (dispatch) => {
-    return APIUtil.updateStory(story).then(
+    return APIUtil.updateStory(formData, storyId).then(
       (updatedStory) => dispatch(receiveStory(updatedStory)),
       (errors) => dispatch(receiveStoryErrors(errors.responseJSON))
     );

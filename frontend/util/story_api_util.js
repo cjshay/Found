@@ -31,11 +31,13 @@ export const createStory = (formData) => {
   });
 };
 
-export const updateStory = (story) => {
+export const updateStory = (formData, storyId) => {
   return $.ajax ({
     method: 'PATCH',
-    url: `/api/stories/${story.id}`,
-    data: {story: story}
+    url: `/api/stories/${storyId}`,
+    data: formData,
+    contentType: false ,
+    processData: false
   });
 };
 

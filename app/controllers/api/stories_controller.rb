@@ -24,7 +24,7 @@ class Api::StoriesController < ApplicationController
 
   def update
     @story = Story.find(params[:id])
-    if @story.update(content: story_params["content"])
+    if @story.update(story_params)
       render :show
     else
       render json: @story.errors.full_messages, status: 422

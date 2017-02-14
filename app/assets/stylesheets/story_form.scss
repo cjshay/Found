@@ -106,11 +106,49 @@
   margin-top: 40px;
 }
 
+.update-image-container {
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 200px;
+  height: 100px;
+}
 
+.update-image-area {
+  width: 200px;
+  height: 100px;
+}
 
+.image-area li {
+  list-style: none;
+}
 
+.update-image-area:hover {
+  background: whitesmoke;
+}
+
+#update-image-file-input {
+  margin: 10px;
+  height: 80px;
+  width: 180px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#update-image-file-input:hover, .img-preview:hover {
+  cursor: pointer;
+}
+
+.update-img-preview {
+  margin: 10px;
+  height: 80px;
+  width: 180px;
+}
 
 .update-story {
+  padding: 20px 0px;
   background: white;
   height: 1000px;
 }
@@ -135,8 +173,8 @@
   border-radius: 18px;
   margin-bottom: 36px;
   font-size: 14px;
-  margin-left: 50%;
-  margin-right: 50%;
+  margin-left: 48%;
+  margin-right: 48%;
   margin-top: 10px;
 }
 
