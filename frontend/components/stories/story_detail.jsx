@@ -14,7 +14,8 @@ class StoryDetail extends React.Component {
     this.likes = this.likes.bind(this);
   }
   componentDidMount() {
-    this.props.fetchStory(this.props.storyId);
+    this.props.fetchStory(this.props.storyId)
+    .then(() => $('body').scrollTop(0));
   }
   toggleHeart () {
     if (this.props.currentUser === null) {

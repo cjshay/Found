@@ -18,7 +18,8 @@ class UpdateStory extends React.Component {
 
   componentDidMount() {
     this.props.fetchStory(this.props.storyId)
-    .then(() => this.setState({content: this.props.story.content}));
+    .then(() => this.setState({content: this.props.story.content}))
+    .then(() => $('body').scrollTop(0));
   }
 
   handleSubmit (event) {
