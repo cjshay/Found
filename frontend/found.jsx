@@ -4,8 +4,6 @@ import configureStore from './store/store.js';
 import Root from './components/root';
 import { fetchStories } from './util/story_api_util';
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
