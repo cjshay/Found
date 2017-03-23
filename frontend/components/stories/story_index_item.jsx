@@ -1,4 +1,5 @@
 import React from 'react';
+import * as Date from '../../util/story_date';
 import { Link } from 'react-router';
 
 // TODO: Current user has no id, change the state shape so that author has just id and points to state shape
@@ -57,6 +58,7 @@ export const StoryIndexItem = (props) => {
   } else {
     content = props.story.content.slice(0, 120) + "...";
   }
+  const month = Date.dates[props.story.date.month];
   return (
     <li className="story-item group">
       <ul>
@@ -74,7 +76,7 @@ export const StoryIndexItem = (props) => {
             <li>
               <ul className="story-item-date-and-length group">
                 <li>{props.story.length} min read</li>
-                <li>Feb { props.story.date.day }</li>
+                <li>{month} { props.story.date.day }</li>
               </ul>
             </li>
           </ul>

@@ -1,6 +1,7 @@
 import React from 'react';
 import CreateStoryFormContainer from './create_story_form_container';
 import ResponsesIndexContainer from './responses_index_container';
+import * as Date from '../../util/story_date';
 import { Link } from 'react-router';
 
 
@@ -81,6 +82,7 @@ class StoryDetail extends React.Component {
       description = this.props.currentUser.description;
     }
     if (this.props.story !== undefined && this.props.story.author !== undefined) {
+      const month = Date.dates[this.props.story.date.month];
       return (
         <main>
           <section className="story-detail-section">
@@ -104,7 +106,7 @@ class StoryDetail extends React.Component {
                       <li>
                         <ul className="detail-story-date group">
                           <li>{this.props.story.length} min read</li>
-                          <li>Feb {this.props.story.date.day}</li>
+                          <li>{month} {this.props.story.date.day}</li>
                         </ul>
                       </li>
 
