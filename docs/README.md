@@ -4,7 +4,7 @@
 
 [Found](https://found-medium.herokuapp.com/)
 
-##Minimum Viable Product
+## Minimum Viable Product
 
 Found is a web application inspired by Medium build using a Ruby on Rails backend with a javascript React/Redux frontend. This project will, by the end of Week 9, include the following:
 
@@ -22,7 +22,7 @@ Found is a web application inspired by Medium build using a Ruby on Rails backen
 
   Topics
 
-##Design Docs
+## Design Docs
 
 [wireframes](./wireframes)
 
@@ -34,24 +34,24 @@ Found is a web application inspired by Medium build using a Ruby on Rails backen
 
 [Schema](schema.md)
 
-##Implementation Timeline
+## Implementation Timeline
 
-###Phase 1: Backend setup and Front End User Authentication (2 days)
+### Phase 1: Backend setup and Front End User Authentication (2 days)
 
 Objective: Rails project with functioning authentication
 
-###Phase 2: Stories model, API, and components (2 days)
+### Phase 2: Stories model, API, and components (2 days)
 
 Objective: Users can create, update, delete, and look at stories
 
-###Phase 3: Comments Model, API and components (2 days)
+### Phase 3: Comments Model, API and components (2 days)
 
 Objective: Users can comment on individual stories (create, update, delete)
 
-###Phase 4: Follows and User feed (1 day)
+### Phase 4: Follows and User feed (1 day)
 
 Objective: Users can follow other users and have access to stories from those users on their feed
 
-###Phase 5: Likes and infinite scroll (1 day)
+### Phase 5: Likes and infinite scroll (1 day)
 
 Objective: Users can like stories and/or comments. User's feeds and show pages have infinite scroll.
