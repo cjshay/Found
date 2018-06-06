@@ -1,7 +1,5 @@
 # Found
 
-[Found](https://found-medium.herokuapp.com/#/)
-
 Found is a full-stack web application inspired by Medium.  It uses a React-redux loop architecture for
 the front-end and a ruby-on-rails back-end.  
 
